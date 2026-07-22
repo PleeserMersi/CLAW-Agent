@@ -437,13 +437,6 @@ print(f"Summary snippet: {summary[:200]}")
 
 ---
 
-## Related Documentation
-
-- [Timestamp Fixing](./PIPELINE_FIXING.md) - Next stage for inaccurate faults  
-- [Fault Extraction](./PIPELINE_FAULT_EXTRACTION.md) - Previous stage  
-- [LLM Utilities](../../utils/UTILS_LLM.md) - LLM call implementation  
-- [Configuration](../../config.py) - Tolerance threshold and paths  
-
 ## Implementation Notes
 
 **Key functions in `src/analysis/accuracy_test.py`**:
@@ -463,3 +456,12 @@ print(f"Summary snippet: {summary[:200]}")
 - `batch_size` - Number of faults per batch (None = no batching, single-fault mode)
 - `max_workers` - Number of parallel ThreadPoolExecutor workers (default: 4)
 - `agent` - OpenClaw agent name (defaults to `AGENT_NAME` from config)
+
+---
+
+## Related Documentation
+
+- [Timestamp Fixing](./PIPELINE_FIXING.md) - Next stage for inaccurate faults  
+- [Fault Extraction](./PIPELINE_FAULT_EXTRACTION.md) - Previous stage  
+- [LLM Utilities](../../utils/UTILS_LLM.md) - LLM call implementation  
+- [Configuration](../../config.py) - Tolerance threshold and paths  
