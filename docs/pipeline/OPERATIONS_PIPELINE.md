@@ -40,7 +40,6 @@ Date Options:
 
 Pipeline Options:
   --verbose                Enable verbose logging (DEBUG level)
-  --no-tunnel              Skip SSH tunnel creation
   --filter                 Enable fault filtering step (runs before tagging)
   --agent NAME             Agent for all pipeline stages (default: from .env)
   --extract-size N         Batch size for extraction (default: 5, None=no batching)
