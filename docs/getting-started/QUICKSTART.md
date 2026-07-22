@@ -151,10 +151,6 @@ This runs:
 ./scripts/run_pipeline.sh --verbose
 ```
 
-### Note on Parallelism
-
-The pipeline handles parallelism internally. No `--workers` flag is needed.
-
 ---
 
 ## Step 6: View Results
