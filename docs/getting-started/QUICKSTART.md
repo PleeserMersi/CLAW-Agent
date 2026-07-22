@@ -11,7 +11,7 @@ Get CLAW-Agent up and running in 5 minutes.
   - OpenClaw installed and configured (`openclaw` command available), **OR**
   - Access to a vLLM server with the desired model
 - JLab logbook API credentials (for fetching shift summaries)
-- SSH access (optional, for remote JLab access or dashboard deployment)
+- SSH access (optional, for remote access or dashboard deployment)
 
 ---
 
