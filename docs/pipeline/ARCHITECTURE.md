@@ -209,14 +209,20 @@ create_text_fragment_link(url, timestamp)     # From link_logic
 - Separate output for removed items
 
 **Decision Criteria for Valid Faults:**
-- ✅ Errors, crashes, delays
-- ✅ Alarms, trips, reboots
-- ✅ Failures, issues, problems
-- ✅ Shutdowns
-- ❌ Routine operations
-- ❌ Normal status updates
-- ❌ Informational notes
-- ❌ Trivia or jokes
+
+**Valid Faults**
+
+- Errors, crashes, delays
+- Alarms, trips, reboots
+- Failures, issues, problems
+- Shutdowns
+
+**Invalid Faults**
+  
+- Routine operations
+- Normal status updates
+- Informational notes
+- Trivia or jokes
 
 **Key Methods:**
 ```python
@@ -310,7 +316,7 @@ Faults DataFrame + Shift Summaries
     │
     ▼
 ┌─────────────────────────────┐
-│ Batch by validation_batch_size│
+│ Batch by validation_batch_size
 └─────────────────────────────┘
     │
     ▼
