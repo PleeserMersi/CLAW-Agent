@@ -151,12 +151,6 @@ This runs:
 ./scripts/run_pipeline.sh --verbose
 ```
 
-### Without SSH Tunnel (Local Access)
-
-```bash
-./scripts/run_pipeline.sh --no-tunnel
-```
-
 ### Note on Parallelism
 
 The pipeline handles parallelism internally. No `--workers` flag is needed.
