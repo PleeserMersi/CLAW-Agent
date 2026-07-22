@@ -115,11 +115,14 @@ FullTimestamp,timestamp,description,tag,run_number,ShiftLogNumber,ShiftLogbookUR
 | Column | Type | Description |
 |--------|------|-------------|
 | LogNumber | int | Logbook entry number |
+| LogbookURL | str | Logbook URL link |
 | Title | str | Entry title |
 | Date | str | Creation date |
+| DateTime | datetime | Creation datetime |
 | Format | str | Content format |
 | Content | str | Plain text content |
-| _hall | str | Hall name |
+| Hall | str | Hall name |
+| NormalizedContent | str | Normalized text content |
 
 ---
 
