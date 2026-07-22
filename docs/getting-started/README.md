@@ -4,7 +4,7 @@
 
 ---
 
-## 📚 Documentation Index
+## Documentation Index
 
 ### Getting Started (`getting-started/`)
 - [Quick Start Guide](./QUICKSTART.md) - Get up and running in 5 minutes
@@ -45,7 +45,7 @@
 
 ---
 
-## 🏗️ Quick Architecture Overview
+## Quick Architecture Overview
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -97,7 +97,7 @@
 
 ---
 
-## 🔑 Key Features
+## Key Features
 
 - **Multi-Hall Support**: Process shift summaries from all 4 JLab halls (A, B, C, D)
 - **LLM-Powered Extraction**: Uses OpenClaw agents for intelligent fault extraction
@@ -111,7 +111,7 @@
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 CLAW-Agent/
@@ -159,7 +159,7 @@ CLAW-Agent/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. Clone and setup
@@ -179,7 +179,7 @@ streamlit run src/frontend/app.py
 
 ---
 
-## 📊 Sample Output
+## Sample Output
 
 The pipeline generates several CSV files:
 
@@ -192,7 +192,7 @@ FullTimestamp,timestamp,description,tag,run_number,ShiftLogNumber,verification_s
 
 ---
 
-## 🎯 Use Cases
+## Use Cases
 
 1. **Daily Fault Analysis**: Run pipeline nightly to extract new faults
 2. **Historical Analysis**: Query date ranges for trend analysis
@@ -202,7 +202,7 @@ FullTimestamp,timestamp,description,tag,run_number,ShiftLogNumber,verification_s
 
 ---
 
-## 📞 Support
+## Support
 
 - **Documentation**: Browse this `/docs` folder
 - **Source Code**: See `src/` for implementation details
@@ -210,7 +210,7 @@ FullTimestamp,timestamp,description,tag,run_number,ShiftLogNumber,verification_s
 
 ---
 
-## 📝 Version Information
+## Version Information
 
 - **Project**: CLAW-Agent
 - **Purpose**: Jefferson Lab Shift Summary Fault Analysis
@@ -224,6 +224,6 @@ FullTimestamp,timestamp,description,tag,run_number,ShiftLogNumber,verification_s
 
 ---
 
-## 📖 Full Documentation Index
+## Full Documentation Index
 
 For a complete index with all cross-references, see [`reference/DOCUMENTATION_INDEX.md`](../reference/DOCUMENTATION_INDEX.md).
