@@ -25,9 +25,6 @@ Complete guide to running and operating the CLAW-Agent pipeline.
 # Verbose logging
 ./scripts/run_pipeline.sh --verbose
 
-# Skip SSH tunnel (if not needed or already established)
-./scripts/run_pipeline.sh --no-tunnel
-
 # Custom batch sizes and workers
 ./scripts/run_pipeline.sh --extract-size 10 --tag-size 20 --workers 8
 ```
