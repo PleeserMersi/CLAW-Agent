@@ -394,7 +394,7 @@ faults_df = pd.DataFrame({
 
 **Edge Cases**:
 - Vague time references (rejected)
-- Multiple faults in one sentence (may merge)
+- Multiple faults in one sentence (may merge or split)
 - Faults without timestamps (skipped)
 
 ### Validation Checks
