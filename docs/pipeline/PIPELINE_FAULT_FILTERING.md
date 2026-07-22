@@ -10,7 +10,7 @@ The filtering stage validates extracted fault descriptions using LLMs to remove 
 
 **Module**: `src/analysis/fault_filter.py`
 
-**Pipeline Position**: Stage 2 (after extraction, before tagging)
+**Pipeline Position**: Stage 2 (after extraction, before tagging) (Optional)
 
 **Input**: Extracted faults DataFrame
 
