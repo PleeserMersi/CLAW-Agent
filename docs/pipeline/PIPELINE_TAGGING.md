@@ -119,7 +119,7 @@ Fault Description
        ▼
 ┌─────────────────────┐
 │ LLM Classification  │
-│ (Select 1 from 5)   │
+│ (Select 1 from 3)   │
 └─────────────────────┘
        │
        ▼
