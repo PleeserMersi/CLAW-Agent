@@ -605,12 +605,12 @@ curl -u JLAB_USERNAME:JLAB_PASSWORD \
 |----------|------|---------|----------|-------------|
 | `JLAB_USERNAME` | String | - | Yes | JLab API username |
 | `JLAB_PASSWORD` | String | - | Yes | JLab API password |
-| `AGENT_NAME` | String | `fault_analyst` | No | OpenClaw agent (used only with openclaw CLI) |
+| `AGENT_NAME` | String | `fault_analyst` | Possibly | OpenClaw agent (used only with openclaw CLI) |
 | `LOG_LEVEL` | String | `INFO` | No | Logging verbosity |
-| `OPENCLAW_PATH` | String | (empty) | No | OpenClaw installation path (if not set, uses vLLM API) |
+| `OPENCLAW_PATH` | String | (empty) | Possibly | OpenClaw installation path (if not set, uses vLLM API) |
 | `OPENCLAW_CMD` | String | (auto) | No | OpenClaw command (auto-set from OPENCLAW_PATH) |
-| `VLLM_BASE_URL` | URL | `http://localhost:8000` | No | vLLM API endpoint (used when OPENCLAW_PATH not set) |
-| `VLLM_MODEL_NAME` | String | `qwen3-32b-local` | No | vLLM model name (used when OPENCLAW_PATH not set) |
+| `VLLM_BASE_URL` | URL | `http://localhost:8000` | Possibly | vLLM API endpoint (used when OPENCLAW_PATH not set) |
+| `VLLM_MODEL_NAME` | String | `qwen3-32b-local` | Possibly | vLLM model name (used when OPENCLAW_PATH not set) |
 | `VLLM_API_KEY` | String | (empty) | No | vLLM API key (optional) |
 | `SSH_USERNAME` | String | - | No | SSH username |
 | `SSH_HOST` | String | - | No | SSH host |
