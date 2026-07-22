@@ -1,0 +1,41 @@
+# Environment variables and credentials
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data files (generated)
+data/*.csv
+data/*.JSON
+data/*.json
+data/raw/
+data/processed/
+data/verified/
+data/fixed/
+data/final_output/
+
+# Testing
+testing/pipeline_output/
+testing/benchmarks/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Accelerator",
+        "keywords": ["accelerator", "rf", "beam", "klystron", "cavity", "linac", "injector", "cebaf", "srf", "superconducting", "arc", "lerf", "beamline", "trim card", "box supply"],
+        "description": "Issues related to the CEBAF or LERF accelerator systems, SRF cavities, RF zones, and linac components, including RF power supplies and magnet trim/box supplies along the beamline."
+    },
+    {
+        "name": "Injector / Source",
+        "keywords": ["injector", "electron source", "polarized source", "photocathode", "gun", "drive laser", "gun high voltage"],
+        "description": "Issues specific to the polarized electron source and injector that produce and initially accelerate the beam, including the photocathode, drive laser, and electron gun high-voltage systems, distinct from downstream linac/RF faults."
+    },
+    {
+        "name": "Beam Diagnostics",
+        "keywords": ["bpm", "bcm", "harp", "superharp", "wire scanner", "viewer", "unser monitor", "beam position", "beam current", "profile monitor"],
+        "description": "Faults in beam instrumentation used to measure and tune the beam, including beam position monitors (BPMs), beam current monitors (BCMs), harp/wire scanners, viewers, and Unser monitors."
+    },
+    {
+        "name": "Halls",
+        "keywords": ["detector", "calorimeter", "spectrometer", "halls", "hall a", "hall b", "hall c", "hall d", "focal plane", "clas12", "gluex", "shms", "hms", "bigbite", "superbigbite", "cherenkov", "drift chamber"],
+        "description": "Problems with experimental detectors, spectrometers, and hall-specific subsystems in Halls A, B, C, and D (e.g., CLAS12 in Hall B, GlueX in Hall D, HMS/SHMS in Hall C, BigBite/SuperBigBite in Hall A)."
+    },
+    {
+        "name": "Cryogenics",
+        "keywords": ["cryo", "cryogenic", "helium", "nitrogen", "cold", "temperature", "cooling", "chiller", "chl", "chl1", "chl2", "esr", "hdr", "cryomodule", "4k", "2k"],
+        "description": "Cryogenic system issues including the Central Helium Liquefier (CHL1/CHL2), End Station Refrigerator (ESR) serving Halls A/B/C, the Hall D Refrigerator (HDR), cryomodule cooling, and 2K/4K regulation."
+    },
+    {
+        "name": "Vacuum",
+        "keywords": ["vacuum", "pressure", "leak", "pump", "ion pump", "turbo", "valve", "vgc", "cold cathode", "roughing pump", "beamline vacuum"],
+        "description": "Vacuum system problems including beamline ultra-high vacuum (UHV) leaks, insulating vacuum failures, ion pumps, turbo pumps, and gauge/valve malfunctions."
+    },
+    {
+        "name": "Magnets",
+        "keywords": ["power supply", "quadrupole", "dipole", "corrector", "steering magnet", "trip"],
+        "description": "Faults in the accelerator's magnet systems (dipoles, quadrupoles, correctors, steering magnets) or their power supplies, which can cause beam steering and transport problems or trip beam permit."
+    },
+    {
+        "name": "Targets",
+        "keywords": ["target", "cryotarget", "polarized target", "liquid hydrogen", "lh2", "ld2", "scattering chamber", "target ladder"],
+        "description": "Issues involving experimental targets, including cryogenic targets (LH2/LD2), polarized targets, solid targets, or cell health and positioning."
+    },
+    {
+        "name": "EPICS",
+        "keywords": ["epics", "ioc", "medm", "edm", "phoebus", "css", "striptool", "mya", "archiver", "scada", "softioc"],
+        "description": "Experimental Physics and Industrial Control System (EPICS) issues, including IOC crashes, screen/GUI errors (MEDM/CS-Studio Phoebus), MYA archiver gaps, or control soft-IOC failures."
+    },
+    {
+        "name": "Power",
+        "keywords": ["power", "voltage", "current", "trip", "breaker", "fuse", "electrical", "psu", "power supply"],
+        "description": "Electrical power issues including voltage/current trips, main power supplies, circuit breakers, and building electrical infrastructure."
+    },
+    {
+        "name": "Safety",
+        "keywords": ["safety", "alarm", "alarm trip", "interlock", "esh", "pss", "mps", "odh", "controlled access", "access control"],
+        "description": "Safety system issues including the Personnel Safety System (PSS), Machine Protection System (MPS), and Oxygen Deficiency Hazard (ODH) monitoring/alarms."
+    },
+    {
+        "name": "Radiation Control (RadCon)",
+        "keywords": ["radcon", "radiation", "dosimetry", "radiation monitor", "beam loss", "activation", "survey"],
+        "description": "Radiation-control issues, including radiation area monitoring, dosimetry, beam-loss-related activation concerns, and radiological surveys — distinct from the PSS/MPS interlock hardware itself."
+    },
+    {
+        "name": "Network",
+        "keywords": ["network", "ethernet", "connection", "timeout", "latency", "bandwidth", "switch", "router", "cc", "scicomp", "halog"],
+        "description": "Network connectivity, data acquisition (DAQ) networking, Computer Center / Scientific Computing resources, and electronic logbook (HALOG) access issues."
+    },
+    {
+        "name": "CODA",
+        "keywords": ["software", "crash", "error", "bug", "glitch", "program", "application", "process", "coda", "roc", "eb", "ts", "rol", "evio", "trigger", "trigger supervisor"],
+        "description": "Software bugs, online computing tools, and JLab CODA (CEBAF Online Data Acquisition) system anomalies, including Readout Controllers (ROC), Event Builder (EB), Trigger Supervisor (TS), or readout list (ROL) problems."
+    },
+    {
+        "name": "Mechanical",
+        "keywords": ["mechanical", "motor", "pump", "valve", "actuator", "motorized", "positioner", "lcw", "low conductivity water", "hvac", "valve box"],
+        "description": "Mechanical infrastructure, motorized positioning systems, valves, and Low Conductivity Water (LCW) cooling loops essential for magnets and RF components."
+    },
+    {
+        "name": "MCC",
+        "keywords": ["mcc", "machine control", "control room", "crew chief", "operator", "ops", "bteam", "program deputy"],
+        "description": "Machine Control Center (MCC) operations, shift handovers, operational logging, and coordination between operators, crew chiefs, and Hall leaders."
+    }
+]

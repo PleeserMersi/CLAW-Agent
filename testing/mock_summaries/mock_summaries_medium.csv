@@ -1,0 +1,301 @@
+LogNumber,LogbookURL,Title,Date,DateTime,Format,Content,NormalizedContent,Hall
+4490109,https://logbooks.jlab.org/entry/4490109,"Swing Shift Summary May 10, 2026",2026-05-10 00:09,2026-05-10 00:09:00,text,"19:45 Run 246108 lost synchronization, full DAQ restart needed.
+18:35 Optics adjustment successful, beam profile improved.
+17:30 Expert arrived, began diagnostics on target mechanism.
+00:10 GEM HV stable, no trips during run.
+21:35 Veto gain calibration completed successfully.
+18:05 Trigger latency errors on hycal4-7, all crates needed reboot.
+20:45 Beam orbit drift exceeded tolerance, MCC correction in progress.
+20:55 GEM gain recalibrated, all channels within spec.
+16:30 Beam tuning completed, rate stabilized at expected levels.
+16:50 Target position stuck at C, expert remote rehome took 25 minutes.
+19:35 Injector stability restored, BPM readings normal.
+22:35 Run 24611 completed with full data integrity.
+21:25 hycal trigger threshold unstable, firmware reload required.
+00:40 Data acquisition rate nominal, buffer levels OK.
+23:10 Run 24612 started after successful diagnostics.
+16:25 Event rate dropped to zero, MCC beam tuning needed for 20 minutes.
+01:10 Halo counter rates within expected range.
+18:45 FADC settings not loading correctly, config file update needed.
+23:25 Event rate stable at 8kHz, no fluctuations.
+21:45 ADCHYCAL5 clock skew detected, crate reinitialization needed.
+20:15 Data quality monitoring showing nominal performance.
+16:00 Shift handover completed, run 246101 in progress at 80 nA.
+21:55 hycal trigger threshold set and verified.
+00:25 Beam current at 150 nA, ramping smoothly.
+01:25 Shift end preparation, all logs updated.
+22:05 Run 246109 terminated due to multiple ROC errors simultaneously.
+18:55 IOC reconnected, control systems back online.
+19:55 Run 24610 started after successful system recovery.
+17:15 GEM crate communication lost, MPD reboot and crate reset required.
+19:15 Config file update applied, FADC loading correctly.","19:45 Run 246108 lost synchronization, full DAQ restart needed. 18:35 Optics adjustment successful, beam profile improved. 17:30 Expert arrived, began diagnostics on target mechanism. 00:10 GEM HV stable, no trips during run. 21:35 Veto gain calibration completed successfully. 18:05 Trigger latency errors on hycal4-7, all crates needed reboot. 20:45 Beam orbit drift exceeded tolerance, MCC correction in progress. 20:55 GEM gain recalibrated, all channels within spec. 16:30 Beam tuning completed, rate stabilized at expected levels. 16:50 Target position stuck at C, expert remote rehome took 25 minutes. 19:35 Injector stability restored, BPM readings normal. 22:35 Run 24611 completed with full data integrity. 21:25 hycal trigger threshold unstable, firmware reload required. 00:40 Data acquisition rate nominal, buffer levels OK. 23:10 Run 24612 started after successful diagnostics. 16:25 Event rate dropped to zero, MCC beam tuning needed for 20 minutes. 01:10 Halo counter rates within expected range. 18:45 FADC settings not loading correctly, config file update needed. 23:25 Event rate stable at 8kHz, no fluctuations. 21:45 ADCHYCAL5 clock skew detected, crate reinitialization needed. 20:15 Data quality monitoring showing nominal performance. 16:00 Shift handover completed, run 246101 in progress at 80 nA. 21:55 hycal trigger threshold set and verified. 00:25 Beam current at 150 nA, ramping smoothly. 01:25 Shift end preparation, all logs updated. 22:05 Run 246109 terminated due to multiple ROC errors simultaneously. 18:55 IOC reconnected, control systems back online. 19:55 Run 24610 started after successful system recovery. 17:15 GEM crate communication lost, MPD reboot and crate reset required. 19:15 Config file update applied, FADC loading correctly.",Hall C
+4490114,https://logbooks.jlab.org/entry/4490114,"Owl Shift Summary May 10, 2026",2026-05-10 19:56,2026-05-10 19:56:00,text,"00:25 Beam current at 150 nA, ramping smoothly.
+16:25 Event rate dropped to zero, MCC beam tuning needed for 20 minutes.
+21:15 Beam orbit corrected, position within tolerance.
+23:40 Live time holding at 97%, all systems green.
+17:40 Beam halo increased 300%, MCC optics adjustment took 30 minutes.
+22:35 Run 24611 completed with full data integrity.
+17:00 Target successfully moved to OUT position.
+20:55 GEM gain recalibrated, all channels within spec.
+16:30 Beam tuning completed, rate stabilized at expected levels.
+20:35 Target pressure stabilized, cell operating normally.
+16:00 DAQ unresponsive for 15 minutes, full system reboot required.
+18:15 Crate reboot completed, communication restored.
+17:30 Expert arrived, began diagnostics on target mechanism.
+20:05 Target cell pressure sensor malfunction, manual check required.
+19:05 BPM fluctuations worsening, injector stability issue reported.
+21:05 Veto scintillator gain drifted, recalibration taking 40 minutes.
+01:10 Halo counter rates within expected range.
+17:50 Beam returned after tuning, resuming data taking.
+20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed.
+19:25 ADCHYCAL ROC high counts detected (~99), ROC reboot required.
+20:45 Beam orbit drift exceeded tolerance, MCC correction in progress.
+23:10 Run 24612 started after successful diagnostics.
+00:55 Run 24613 completed, quality checks passed.
+01:25 Shift end preparation, all logs updated.
+23:25 Event rate stable at 8kHz, no fluctuations.
+18:35 Optics adjustment successful, beam profile improved.
+21:35 Veto gain calibration completed successfully.
+18:45 FADC settings not loading correctly, config file update needed.
+22:55 Separator magnet stabilized, power supply nominal.
+22:15 ADCHYCAL clock sync restored, no further skew.","00:25 Beam current at 150 nA, ramping smoothly. 16:25 Event rate dropped to zero, MCC beam tuning needed for 20 minutes. 21:15 Beam orbit corrected, position within tolerance. 23:40 Live time holding at 97%, all systems green. 17:40 Beam halo increased 300%, MCC optics adjustment took 30 minutes. 22:35 Run 24611 completed with full data integrity. 17:00 Target successfully moved to OUT position. 20:55 GEM gain recalibrated, all channels within spec. 16:30 Beam tuning completed, rate stabilized at expected levels. 20:35 Target pressure stabilized, cell operating normally. 16:00 DAQ unresponsive for 15 minutes, full system reboot required. 18:15 Crate reboot completed, communication restored. 17:30 Expert arrived, began diagnostics on target mechanism. 20:05 Target cell pressure sensor malfunction, manual check required. 19:05 BPM fluctuations worsening, injector stability issue reported. 21:05 Veto scintillator gain drifted, recalibration taking 40 minutes. 01:10 Halo counter rates within expected range. 17:50 Beam returned after tuning, resuming data taking. 20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed. 19:25 ADCHYCAL ROC high counts detected (~99), ROC reboot required. 20:45 Beam orbit drift exceeded tolerance, MCC correction in progress. 23:10 Run 24612 started after successful diagnostics. 00:55 Run 24613 completed, quality checks passed. 01:25 Shift end preparation, all logs updated. 23:25 Event rate stable at 8kHz, no fluctuations. 18:35 Optics adjustment successful, beam profile improved. 21:35 Veto gain calibration completed successfully. 18:45 FADC settings not loading correctly, config file update needed. 22:55 Separator magnet stabilized, power supply nominal. 22:15 ADCHYCAL clock sync restored, no further skew.",Hall D
+4490128,https://logbooks.jlab.org/entry/4490128,"Day Shift Summary May 11, 2026",2026-05-11 05:00,2026-05-11 05:00:00,text,"20:35 Target pressure stabilized, cell operating normally.
+20:05 Target cell pressure sensor malfunction, manual check required.
+18:05 Trigger latency errors on hycal4-7, all crates needed reboot.
+21:55 hycal trigger threshold set and verified.
+16:50 Target position stuck at C, expert remote rehome took 25 minutes.
+17:50 Beam returned after tuning, resuming data taking.
+18:55 IOC reconnected, control systems back online.
+01:25 Shift end preparation, all logs updated.
+19:55 Run 24610 started after successful system recovery.
+17:00 Target successfully moved to OUT position.
+22:35 Run 24611 completed with full data integrity.
+19:25 ADCHYCAL ROC high counts detected (~99), ROC reboot required.
+17:15 GEM crate communication lost, MPD reboot and crate reset required.
+22:05 Run 246129 terminated due to multiple ROC errors simultaneously.
+16:00 DAQ unresponsive for 15 minutes, full system reboot required.
+16:30 Beam tuning completed, rate stabilized at expected levels.
+23:10 Run 24612 started after successful diagnostics.
+22:55 Separator magnet stabilized, power supply nominal.
+00:40 Data acquisition rate nominal, buffer levels OK.
+23:25 Event rate stable at 8kHz, no fluctuations.
+20:15 Data quality monitoring showing nominal performance.
+20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed.
+19:15 Config file update applied, FADC loading correctly.
+21:35 Veto gain calibration completed successfully.
+21:05 Veto scintillator gain drifted, recalibration taking 40 minutes.
+21:15 Beam orbit corrected, position within tolerance.
+17:30 Expert arrived, began diagnostics on target mechanism.
+18:25 IOC communication lost, LabView restart and reconnection required.
+19:35 Injector stability restored, BPM readings normal.
+20:55 GEM gain recalibrated, all channels within spec.","20:35 Target pressure stabilized, cell operating normally. 20:05 Target cell pressure sensor malfunction, manual check required. 18:05 Trigger latency errors on hycal4-7, all crates needed reboot. 21:55 hycal trigger threshold set and verified. 16:50 Target position stuck at C, expert remote rehome took 25 minutes. 17:50 Beam returned after tuning, resuming data taking. 18:55 IOC reconnected, control systems back online. 01:25 Shift end preparation, all logs updated. 19:55 Run 24610 started after successful system recovery. 17:00 Target successfully moved to OUT position. 22:35 Run 24611 completed with full data integrity. 19:25 ADCHYCAL ROC high counts detected (~99), ROC reboot required. 17:15 GEM crate communication lost, MPD reboot and crate reset required. 22:05 Run 246129 terminated due to multiple ROC errors simultaneously. 16:00 DAQ unresponsive for 15 minutes, full system reboot required. 16:30 Beam tuning completed, rate stabilized at expected levels. 23:10 Run 24612 started after successful diagnostics. 22:55 Separator magnet stabilized, power supply nominal. 00:40 Data acquisition rate nominal, buffer levels OK. 23:25 Event rate stable at 8kHz, no fluctuations. 20:15 Data quality monitoring showing nominal performance. 20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed. 19:15 Config file update applied, FADC loading correctly. 21:35 Veto gain calibration completed successfully. 21:05 Veto scintillator gain drifted, recalibration taking 40 minutes. 21:15 Beam orbit corrected, position within tolerance. 17:30 Expert arrived, began diagnostics on target mechanism. 18:25 IOC communication lost, LabView restart and reconnection required. 19:35 Injector stability restored, BPM readings normal. 20:55 GEM gain recalibrated, all channels within spec.",Hall A
+4490130,https://logbooks.jlab.org/entry/4490130,"Swing Shift Summary May 10, 2026",2026-05-10 19:30,2026-05-10 19:30:00,text,"19:25 ADCHYCAL ROC high counts detected (~99), ROC reboot required.
+22:35 Run 24611 completed with full data integrity.
+18:25 IOC communication lost, LabView restart and reconnection required.
+21:05 Veto scintillator gain drifted, recalibration taking 40 minutes.
+22:15 ADCHYCAL clock sync restored, no further skew.
+16:00 DAQ unresponsive for 15 minutes, full system reboot required.
+19:05 BPM fluctuations worsening, injector stability issue reported.
+20:35 Target pressure stabilized, cell operating normally.
+22:45 LabView crashed during data transfer, manual recovery needed.
+19:35 Injector stability restored, BPM readings normal.
+21:35 Veto gain calibration completed successfully.
+17:50 Beam returned after tuning, resuming data taking.
+16:25 Event rate dropped to zero, MCC beam tuning needed for 20 minutes.
+18:35 Optics adjustment successful, beam profile improved.
+00:40 Data acquisition rate nominal, buffer levels OK.
+17:00 Target successfully moved to OUT position.
+19:15 Config file update applied, FADC loading correctly.
+23:25 Event rate stable at 8kHz, no fluctuations.
+20:15 Data quality monitoring showing nominal performance.
+22:05 Run 246139 terminated due to multiple ROC errors simultaneously.
+18:15 Crate reboot completed, communication restored.
+23:40 Live time holding at 97%, all systems green.
+18:05 Trigger latency errors on hycal4-7, all crates needed reboot.
+20:45 Beam orbit drift exceeded tolerance, MCC correction in progress.
+00:55 Run 24613 completed, quality checks passed.
+22:55 Separator magnet stabilized, power supply nominal.
+21:55 hycal trigger threshold set and verified.
+01:25 Shift end preparation, all logs updated.
+20:55 GEM gain recalibrated, all channels within spec.
+00:10 GEM HV stable, no trips during run.","19:25 ADCHYCAL ROC high counts detected (~99), ROC reboot required. 22:35 Run 24611 completed with full data integrity. 18:25 IOC communication lost, LabView restart and reconnection required. 21:05 Veto scintillator gain drifted, recalibration taking 40 minutes. 22:15 ADCHYCAL clock sync restored, no further skew. 16:00 DAQ unresponsive for 15 minutes, full system reboot required. 19:05 BPM fluctuations worsening, injector stability issue reported. 20:35 Target pressure stabilized, cell operating normally. 22:45 LabView crashed during data transfer, manual recovery needed. 19:35 Injector stability restored, BPM readings normal. 21:35 Veto gain calibration completed successfully. 17:50 Beam returned after tuning, resuming data taking. 16:25 Event rate dropped to zero, MCC beam tuning needed for 20 minutes. 18:35 Optics adjustment successful, beam profile improved. 00:40 Data acquisition rate nominal, buffer levels OK. 17:00 Target successfully moved to OUT position. 19:15 Config file update applied, FADC loading correctly. 23:25 Event rate stable at 8kHz, no fluctuations. 20:15 Data quality monitoring showing nominal performance. 22:05 Run 246139 terminated due to multiple ROC errors simultaneously. 18:15 Crate reboot completed, communication restored. 23:40 Live time holding at 97%, all systems green. 18:05 Trigger latency errors on hycal4-7, all crates needed reboot. 20:45 Beam orbit drift exceeded tolerance, MCC correction in progress. 00:55 Run 24613 completed, quality checks passed. 22:55 Separator magnet stabilized, power supply nominal. 21:55 hycal trigger threshold set and verified. 01:25 Shift end preparation, all logs updated. 20:55 GEM gain recalibrated, all channels within spec. 00:10 GEM HV stable, no trips during run.",Hall B
+4490149,https://logbooks.jlab.org/entry/4490149,"Owl Shift Summary May 10, 2026",2026-05-10 05:23,2026-05-10 05:23:00,text,"18:35 Optics adjustment successful, beam profile improved.
+22:15 ADCHYCAL clock sync restored, no further skew.
+01:10 Halo counter rates within expected range.
+18:45 FADC settings not loading correctly, config file update needed.
+22:05 Run 246149 terminated due to multiple ROC errors simultaneously.
+00:55 Run 24613 completed, quality checks passed.
+16:50 Target position stuck at C, expert remote rehome took 25 minutes.
+21:15 Beam orbit corrected, position within tolerance.
+19:25 ADCHYCAL ROC high counts detected (~99), ROC reboot required.
+21:55 hycal trigger threshold set and verified.
+20:55 GEM gain recalibrated, all channels within spec.
+20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed.
+21:45 ADCHYCAL5 clock skew detected, crate reinitialization needed.
+22:55 Separator magnet stabilized, power supply nominal.
+20:15 Data quality monitoring showing nominal performance.
+16:30 Beam tuning completed, rate stabilized at expected levels.
+23:10 Run 24612 started after successful diagnostics.
+23:55 Target position confirmed, no drift detected.
+16:00 Shift handover completed, run 246141 in progress at 80 nA.
+17:00 Target successfully moved to OUT position.
+19:05 BPM fluctuations worsening, injector stability issue reported.
+20:05 Target cell pressure sensor malfunction, manual check required.
+18:55 IOC reconnected, control systems back online.
+19:15 Config file update applied, FADC loading correctly.
+22:35 Run 24611 completed with full data integrity.
+20:45 Beam orbit drift exceeded tolerance, MCC correction in progress.
+16:00 DAQ unresponsive for 15 minutes, full system reboot required.
+18:15 Crate reboot completed, communication restored.
+23:40 Live time holding at 97%, all systems green.
+17:50 Beam returned after tuning, resuming data taking.","18:35 Optics adjustment successful, beam profile improved. 22:15 ADCHYCAL clock sync restored, no further skew. 01:10 Halo counter rates within expected range. 18:45 FADC settings not loading correctly, config file update needed. 22:05 Run 246149 terminated due to multiple ROC errors simultaneously. 00:55 Run 24613 completed, quality checks passed. 16:50 Target position stuck at C, expert remote rehome took 25 minutes. 21:15 Beam orbit corrected, position within tolerance. 19:25 ADCHYCAL ROC high counts detected (~99), ROC reboot required. 21:55 hycal trigger threshold set and verified. 20:55 GEM gain recalibrated, all channels within spec. 20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed. 21:45 ADCHYCAL5 clock skew detected, crate reinitialization needed. 22:55 Separator magnet stabilized, power supply nominal. 20:15 Data quality monitoring showing nominal performance. 16:30 Beam tuning completed, rate stabilized at expected levels. 23:10 Run 24612 started after successful diagnostics. 23:55 Target position confirmed, no drift detected. 16:00 Shift handover completed, run 246141 in progress at 80 nA. 17:00 Target successfully moved to OUT position. 19:05 BPM fluctuations worsening, injector stability issue reported. 20:05 Target cell pressure sensor malfunction, manual check required. 18:55 IOC reconnected, control systems back online. 19:15 Config file update applied, FADC loading correctly. 22:35 Run 24611 completed with full data integrity. 20:45 Beam orbit drift exceeded tolerance, MCC correction in progress. 16:00 DAQ unresponsive for 15 minutes, full system reboot required. 18:15 Crate reboot completed, communication restored. 23:40 Live time holding at 97%, all systems green. 17:50 Beam returned after tuning, resuming data taking.",Hall C
+4490152,https://logbooks.jlab.org/entry/4490152,"Day Shift Summary May 10, 2026",2026-05-10 10:39,2026-05-10 10:39:00,text,"22:25 Separator magnet power supply fluctuating, engineering notified.
+21:55 hycal trigger threshold set and verified.
+17:50 Beam returned after tuning, resuming data taking.
+00:55 Run 24613 completed, quality checks passed.
+23:40 Live time holding at 97%, all systems green.
+23:55 Target position confirmed, no drift detected.
+18:25 IOC communication lost, LabView restart and reconnection required.
+20:55 GEM gain recalibrated, all channels within spec.
+17:15 GEM crate communication lost, MPD reboot and crate reset required.
+20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed.
+00:10 GEM HV stable, no trips during run.
+18:35 Optics adjustment successful, beam profile improved.
+23:10 Run 24612 started after successful diagnostics.
+19:45 Run 246158 lost synchronization, full DAQ restart needed.
+22:35 Run 24611 completed with full data integrity.
+19:15 Config file update applied, FADC loading correctly.
+21:25 hycal trigger threshold unstable, firmware reload required.
+23:25 Event rate stable at 8kHz, no fluctuations.
+01:10 Halo counter rates within expected range.
+18:55 IOC reconnected, control systems back online.
+21:45 ADCHYCAL5 clock skew detected, crate reinitialization needed.
+20:15 Data quality monitoring showing nominal performance.
+17:40 Beam halo increased 300%, MCC optics adjustment took 30 minutes.
+16:00 DAQ unresponsive for 15 minutes, full system reboot required.
+19:05 BPM fluctuations worsening, injector stability issue reported.
+00:40 Data acquisition rate nominal, buffer levels OK.
+21:15 Beam orbit corrected, position within tolerance.
+22:15 ADCHYCAL clock sync restored, no further skew.
+00:25 Beam current at 150 nA, ramping smoothly.
+19:55 Run 24610 started after successful system recovery.","22:25 Separator magnet power supply fluctuating, engineering notified. 21:55 hycal trigger threshold set and verified. 17:50 Beam returned after tuning, resuming data taking. 00:55 Run 24613 completed, quality checks passed. 23:40 Live time holding at 97%, all systems green. 23:55 Target position confirmed, no drift detected. 18:25 IOC communication lost, LabView restart and reconnection required. 20:55 GEM gain recalibrated, all channels within spec. 17:15 GEM crate communication lost, MPD reboot and crate reset required. 20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed. 00:10 GEM HV stable, no trips during run. 18:35 Optics adjustment successful, beam profile improved. 23:10 Run 24612 started after successful diagnostics. 19:45 Run 246158 lost synchronization, full DAQ restart needed. 22:35 Run 24611 completed with full data integrity. 19:15 Config file update applied, FADC loading correctly. 21:25 hycal trigger threshold unstable, firmware reload required. 23:25 Event rate stable at 8kHz, no fluctuations. 01:10 Halo counter rates within expected range. 18:55 IOC reconnected, control systems back online. 21:45 ADCHYCAL5 clock skew detected, crate reinitialization needed. 20:15 Data quality monitoring showing nominal performance. 17:40 Beam halo increased 300%, MCC optics adjustment took 30 minutes. 16:00 DAQ unresponsive for 15 minutes, full system reboot required. 19:05 BPM fluctuations worsening, injector stability issue reported. 00:40 Data acquisition rate nominal, buffer levels OK. 21:15 Beam orbit corrected, position within tolerance. 22:15 ADCHYCAL clock sync restored, no further skew. 00:25 Beam current at 150 nA, ramping smoothly. 19:55 Run 24610 started after successful system recovery.",Hall D
+4490166,https://logbooks.jlab.org/entry/4490166,"Swing Shift Summary May 15, 2026",2026-05-15 05:15,2026-05-15 05:15:00,text,"17:00 Target successfully moved to OUT position.
+00:55 Run 24613 completed, quality checks passed.
+20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed.
+00:25 Beam current at 150 nA, ramping smoothly.
+22:15 ADCHYCAL clock sync restored, no further skew.
+19:15 Config file update applied, FADC loading correctly.
+01:25 Shift end preparation, all logs updated.
+01:10 Halo counter rates within expected range.
+22:05 Run 246169 terminated due to multiple ROC errors simultaneously.
+21:15 Beam orbit corrected, position within tolerance.
+00:10 GEM HV stable, no trips during run.
+18:25 IOC communication lost, LabView restart and reconnection required.
+17:15 GEM crate communication lost, MPD reboot and crate reset required.
+20:05 Target cell pressure sensor malfunction, manual check required.
+20:55 GEM gain recalibrated, all channels within spec.
+17:30 Expert arrived, began diagnostics on target mechanism.
+19:55 Run 24610 started after successful system recovery.
+22:35 Run 24611 completed with full data integrity.
+18:05 Trigger latency errors on hycal4-7, all crates needed reboot.
+21:55 hycal trigger threshold set and verified.
+22:55 Separator magnet stabilized, power supply nominal.
+22:25 Separator magnet power supply fluctuating, engineering notified.
+16:00 DAQ unresponsive for 15 minutes, full system reboot required.
+19:05 BPM fluctuations worsening, injector stability issue reported.
+23:10 Run 24612 started after successful diagnostics.
+22:45 LabView crashed during data transfer, manual recovery needed.
+23:55 Target position confirmed, no drift detected.
+18:55 IOC reconnected, control systems back online.
+21:35 Veto gain calibration completed successfully.
+00:40 Data acquisition rate nominal, buffer levels OK.","17:00 Target successfully moved to OUT position. 00:55 Run 24613 completed, quality checks passed. 20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed. 00:25 Beam current at 150 nA, ramping smoothly. 22:15 ADCHYCAL clock sync restored, no further skew. 19:15 Config file update applied, FADC loading correctly. 01:25 Shift end preparation, all logs updated. 01:10 Halo counter rates within expected range. 22:05 Run 246169 terminated due to multiple ROC errors simultaneously. 21:15 Beam orbit corrected, position within tolerance. 00:10 GEM HV stable, no trips during run. 18:25 IOC communication lost, LabView restart and reconnection required. 17:15 GEM crate communication lost, MPD reboot and crate reset required. 20:05 Target cell pressure sensor malfunction, manual check required. 20:55 GEM gain recalibrated, all channels within spec. 17:30 Expert arrived, began diagnostics on target mechanism. 19:55 Run 24610 started after successful system recovery. 22:35 Run 24611 completed with full data integrity. 18:05 Trigger latency errors on hycal4-7, all crates needed reboot. 21:55 hycal trigger threshold set and verified. 22:55 Separator magnet stabilized, power supply nominal. 22:25 Separator magnet power supply fluctuating, engineering notified. 16:00 DAQ unresponsive for 15 minutes, full system reboot required. 19:05 BPM fluctuations worsening, injector stability issue reported. 23:10 Run 24612 started after successful diagnostics. 22:45 LabView crashed during data transfer, manual recovery needed. 23:55 Target position confirmed, no drift detected. 18:55 IOC reconnected, control systems back online. 21:35 Veto gain calibration completed successfully. 00:40 Data acquisition rate nominal, buffer levels OK.",Hall A
+4490171,https://logbooks.jlab.org/entry/4490171,"Owl Shift Summary May 12, 2026",2026-05-12 02:43,2026-05-12 02:43:00,text,"18:35 Optics adjustment successful, beam profile improved.
+19:35 Injector stability restored, BPM readings normal.
+01:25 Shift end preparation, all logs updated.
+21:35 Veto gain calibration completed successfully.
+22:15 ADCHYCAL clock sync restored, no further skew.
+17:15 GEM crate communication lost, MPD reboot and crate reset required.
+20:55 GEM gain recalibrated, all channels within spec.
+20:45 Beam orbit drift exceeded tolerance, MCC correction in progress.
+00:10 GEM HV stable, no trips during run.
+20:35 Target pressure stabilized, cell operating normally.
+22:25 Separator magnet power supply fluctuating, engineering notified.
+18:05 Trigger latency errors on hycal4-7, all crates needed reboot.
+16:00 Shift handover completed, run 246171 in progress at 80 nA.
+00:55 Run 24613 completed, quality checks passed.
+23:40 Live time holding at 97%, all systems green.
+00:25 Beam current at 150 nA, ramping smoothly.
+19:15 Config file update applied, FADC loading correctly.
+23:55 Target position confirmed, no drift detected.
+17:00 Target successfully moved to OUT position.
+20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed.
+19:55 Run 24610 started after successful system recovery.
+18:25 IOC communication lost, LabView restart and reconnection required.
+00:40 Data acquisition rate nominal, buffer levels OK.
+17:40 Beam halo increased 300%, MCC optics adjustment took 30 minutes.
+21:15 Beam orbit corrected, position within tolerance.
+16:00 DAQ unresponsive for 15 minutes, full system reboot required.
+23:25 Event rate stable at 8kHz, no fluctuations.
+16:50 Target position stuck at C, expert remote rehome took 25 minutes.
+23:10 Run 24612 started after successful diagnostics.
+19:45 Run 246178 lost synchronization, full DAQ restart needed.","18:35 Optics adjustment successful, beam profile improved. 19:35 Injector stability restored, BPM readings normal. 01:25 Shift end preparation, all logs updated. 21:35 Veto gain calibration completed successfully. 22:15 ADCHYCAL clock sync restored, no further skew. 17:15 GEM crate communication lost, MPD reboot and crate reset required. 20:55 GEM gain recalibrated, all channels within spec. 20:45 Beam orbit drift exceeded tolerance, MCC correction in progress. 00:10 GEM HV stable, no trips during run. 20:35 Target pressure stabilized, cell operating normally. 22:25 Separator magnet power supply fluctuating, engineering notified. 18:05 Trigger latency errors on hycal4-7, all crates needed reboot. 16:00 Shift handover completed, run 246171 in progress at 80 nA. 00:55 Run 24613 completed, quality checks passed. 23:40 Live time holding at 97%, all systems green. 00:25 Beam current at 150 nA, ramping smoothly. 19:15 Config file update applied, FADC loading correctly. 23:55 Target position confirmed, no drift detected. 17:00 Target successfully moved to OUT position. 20:25 GEM2 MPD0 disconnected during run, hot-swap replacement needed. 19:55 Run 24610 started after successful system recovery. 18:25 IOC communication lost, LabView restart and reconnection required. 00:40 Data acquisition rate nominal, buffer levels OK. 17:40 Beam halo increased 300%, MCC optics adjustment took 30 minutes. 21:15 Beam orbit corrected, position within tolerance. 16:00 DAQ unresponsive for 15 minutes, full system reboot required. 23:25 Event rate stable at 8kHz, no fluctuations. 16:50 Target position stuck at C, expert remote rehome took 25 minutes. 23:10 Run 24612 started after successful diagnostics. 19:45 Run 246178 lost synchronization, full DAQ restart needed.",Hall B
+4490183,https://logbooks.jlab.org/entry/4490183,"Day Shift Summary May 15, 2026",2026-05-15 01:23,2026-05-15 01:23:00,text,"22:15 ADCHYCAL clock sync restored, no further skew.
+22:05 Run 246189 terminated due to multiple ROC errors simultaneously.
+23:40 Live time holding at 97%, all systems green.
+16:00 Shift handover completed, run 246181 in progress at 80 nA.
+22:25 Separator magnet power supply fluctuating, engineering notified.
+00:40 Data acquisition rate nominal, buffer levels OK.
+19:05 BPM fluctuations worsening, injector stability issue reported.
+18:15 Crate reboot completed, communication restored.
+18:55 IOC reconnected, control systems back online.
+23:25 Event rate stable at 8kHz, no fluctuations.
+22:35 Run 24611 completed with full data integrity.
+22:45 LabView crashed during data transfer, manual recovery needed.
+17:50 Beam returned after tuning, resuming data taking.
+21:55 hycal trigger threshold set and verified.
+20:05 Target cell pressure sensor malfunction, manual check required.
+17:30 Expert arrived, began diagnostics on target mechanism.
+19:55 Run 24610 started after successful system recovery.
+20:55 GEM gain recalibrated, all channels within spec.
+16:00 DAQ unresponsive for 15 minutes, full system reboot required.
+20:15 Data quality monitoring showing nominal performance.
+21:35 Veto gain calibration completed successfully.
+20:35 Target pressure stabilized, cell operating normally.
+21:05 Veto scintillator gain drifted, recalibration taking 40 minutes.
+19:35 Injector stability restored, BPM readings normal.
+19:15 Config file update applied, FADC loading correctly.
+16:50 Target position stuck at C, expert remote rehome took 25 minutes.
+19:45 Run 246188 lost synchronization, full DAQ restart needed.
+18:25 IOC communication lost, LabView restart and reconnection required.
+16:30 Beam tuning completed, rate stabilized at expected levels.
+17:00 Target successfully moved to OUT position.","22:15 ADCHYCAL clock sync restored, no further skew. 22:05 Run 246189 terminated due to multiple ROC errors simultaneously. 23:40 Live time holding at 97%, all systems green. 16:00 Shift handover completed, run 246181 in progress at 80 nA. 22:25 Separator magnet power supply fluctuating, engineering notified. 00:40 Data acquisition rate nominal, buffer levels OK. 19:05 BPM fluctuations worsening, injector stability issue reported. 18:15 Crate reboot completed, communication restored. 18:55 IOC reconnected, control systems back online. 23:25 Event rate stable at 8kHz, no fluctuations. 22:35 Run 24611 completed with full data integrity. 22:45 LabView crashed during data transfer, manual recovery needed. 17:50 Beam returned after tuning, resuming data taking. 21:55 hycal trigger threshold set and verified. 20:05 Target cell pressure sensor malfunction, manual check required. 17:30 Expert arrived, began diagnostics on target mechanism. 19:55 Run 24610 started after successful system recovery. 20:55 GEM gain recalibrated, all channels within spec. 16:00 DAQ unresponsive for 15 minutes, full system reboot required. 20:15 Data quality monitoring showing nominal performance. 21:35 Veto gain calibration completed successfully. 20:35 Target pressure stabilized, cell operating normally. 21:05 Veto scintillator gain drifted, recalibration taking 40 minutes. 19:35 Injector stability restored, BPM readings normal. 19:15 Config file update applied, FADC loading correctly. 16:50 Target position stuck at C, expert remote rehome took 25 minutes. 19:45 Run 246188 lost synchronization, full DAQ restart needed. 18:25 IOC communication lost, LabView restart and reconnection required. 16:30 Beam tuning completed, rate stabilized at expected levels. 17:00 Target successfully moved to OUT position.",Hall C
+4490199,https://logbooks.jlab.org/entry/4490199,"Swing Shift Summary May 12, 2026",2026-05-12 12:06,2026-05-12 12:06:00,text,"21:35 Veto gain calibration completed successfully.
+00:55 Run 24613 completed, quality checks passed.
+16:30 Beam tuning completed, rate stabilized at expected levels.
+20:15 Data quality monitoring showing nominal performance.
+22:05 Run 246199 terminated due to multiple ROC errors simultaneously.
+21:55 hycal trigger threshold set and verified.
+00:10 GEM HV stable, no trips during run.
+16:25 Event rate dropped to zero, MCC beam tuning needed for 20 minutes.
+19:15 Config file update applied, FADC loading correctly.
+21:25 hycal trigger threshold unstable, firmware reload required.
+18:25 IOC communication lost, LabView restart and reconnection required.
+21:15 Beam orbit corrected, position within tolerance.
+17:40 Beam halo increased 300%, MCC optics adjustment took 30 minutes.
+21:45 ADCHYCAL5 clock skew detected, crate reinitialization needed.
+19:35 Injector stability restored, BPM readings normal.
+22:45 LabView crashed during data transfer, manual recovery needed.
+01:25 Shift end preparation, all logs updated.
+20:35 Target pressure stabilized, cell operating normally.
+01:10 Halo counter rates within expected range.
+19:55 Run 24610 started after successful system recovery.
+00:25 Beam current at 150 nA, ramping smoothly.
+23:10 Run 24612 started after successful diagnostics.
+18:55 IOC reconnected, control systems back online.
+16:00 Shift handover completed, run 246191 in progress at 80 nA.
+22:25 Separator magnet power supply fluctuating, engineering notified.
+18:05 Trigger latency errors on hycal4-7, all crates needed reboot.
+20:05 Target cell pressure sensor malfunction, manual check required.
+18:35 Optics adjustment successful, beam profile improved.
+00:40 Data acquisition rate nominal, buffer levels OK.
+20:55 GEM gain recalibrated, all channels within spec.","21:35 Veto gain calibration completed successfully. 00:55 Run 24613 completed, quality checks passed. 16:30 Beam tuning completed, rate stabilized at expected levels. 20:15 Data quality monitoring showing nominal performance. 22:05 Run 246199 terminated due to multiple ROC errors simultaneously. 21:55 hycal trigger threshold set and verified. 00:10 GEM HV stable, no trips during run. 16:25 Event rate dropped to zero, MCC beam tuning needed for 20 minutes. 19:15 Config file update applied, FADC loading correctly. 21:25 hycal trigger threshold unstable, firmware reload required. 18:25 IOC communication lost, LabView restart and reconnection required. 21:15 Beam orbit corrected, position within tolerance. 17:40 Beam halo increased 300%, MCC optics adjustment took 30 minutes. 21:45 ADCHYCAL5 clock skew detected, crate reinitialization needed. 19:35 Injector stability restored, BPM readings normal. 22:45 LabView crashed during data transfer, manual recovery needed. 01:25 Shift end preparation, all logs updated. 20:35 Target pressure stabilized, cell operating normally. 01:10 Halo counter rates within expected range. 19:55 Run 24610 started after successful system recovery. 00:25 Beam current at 150 nA, ramping smoothly. 23:10 Run 24612 started after successful diagnostics. 18:55 IOC reconnected, control systems back online. 16:00 Shift handover completed, run 246191 in progress at 80 nA. 22:25 Separator magnet power supply fluctuating, engineering notified. 18:05 Trigger latency errors on hycal4-7, all crates needed reboot. 20:05 Target cell pressure sensor malfunction, manual check required. 18:35 Optics adjustment successful, beam profile improved. 00:40 Data acquisition rate nominal, buffer levels OK. 20:55 GEM gain recalibrated, all channels within spec.",Hall D

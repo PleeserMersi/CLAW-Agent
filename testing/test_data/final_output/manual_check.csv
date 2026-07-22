@@ -1,0 +1,36 @@
+FullTimestamp,timestamp,description,tag,run_number,ShiftLogNumber,ShiftLogbookURL,ShiftTitle,ShiftDateTime,ShiftHall,FragmentLink
+,,,,,,,,,,
+2026-05-10 17:50:00,06:45,Target position jitter detected causing beam alignment issues,Other,,4490002.0,https://logbooks.jlab.org/entry/4490002,"Day Shift Summary May 10, 2026",2026-05-10 17:03:00,Hall A,https://logbooks.jlab.org/entry/4490002#:~:text=17%3A50
+2026-05-12 20:30:00,08:04,"FADC channel 12 showing saturation, hardware check needed",Other,,4490056,https://logbooks.jlab.org/entry/4490056,"Owl Shift Summary May 12, 2026",2026-05-12 15:09:00,Hall B,https://logbooks.jlab.org/entry/4490056#:~:text=20%3A30
+
+2026-05-10 20:20:00,20:20,Run 245007 terminated early due to trigger rate anomaly,Other,245007.0,4490002,https://logbooks.jlab.org/entry/4490002,"Day Shift Summary May 10, 2026",2026-05-10 17:03:00,Hall A,https://logbooks.jlab.org/entry/4490002#:~:text=20%3A20
+2026-05-09 16:20:00,16:20,Run 245042 ended prematurely due to event rate dropping to zero,Other,245042.0,4490049,https://logbooks.jlab.org/entry/4490049,"Swing Shift Summary May 09, 2026",2026-05-09 03:16:00,Hall A,https://logbooks.jlab.org/entry/4490049#:~:text=16%3A20
+2026-05-10 17:50:00,17:50,Target position jitter detected causing beam alignment issues,Other,,4490002,https://logbooks.jlab.org/entry/4490002,"Day Shift Summary May 10, 2026",2026-05-10 17:03:00,Hall A,https://logbooks.jlab.org/entry/4490002#:~:text=17%3A50
+2026-05-10 16:40:00,16:40,Beam trip occurred lasting 8 minutes due to MCC injector issue,Other,,4490002,https://logbooks.jlab.org/entry/4490002,"Day Shift Summary May 10, 2026",2026-05-10 17:03:00,Hall A,https://logbooks.jlab.org/entry/4490002#:~:text=16%3A40
+2026-05-10 16:10:00,16:10,Run 245001 started but DAQ crashed immediately after startup,Other,245001.0,4490002,https://logbooks.jlab.org/entry/4490002,"Day Shift Summary May 10, 2026",2026-05-10 17:03:00,Hall A,https://logbooks.jlab.org/entry/4490002#:~:text=16%3A10
+
+2026-05-15 18:55:00,18:55,"IOC communication lost, control systems offline",Other,,4490183,https://logbooks.jlab.org/entry/4490183,"Day Shift Summary May 15, 2026",2026-05-15 01:23:00,Hall C,https://logbooks.jlab.org/entry/4490183#:~:text=18%3A55
+2026-05-12 22:15:00,22:15,"ADCHYCAL clock sync restored, no further skew",Other,,4490199,https://logbooks.jlab.org/entry/4490199,"Swing Shift Summary May 12, 2026",2026-05-12 12:06:00,Hall D,https://logbooks.jlab.org/entry/4490199#:~:text=22%3A15
+2026-05-12 16:00:00,16:00,"DAQ unresponsive for 15 minutes, full system reboot required",Other,,4490171,https://logbooks.jlab.org/entry/4490171,"Owl Shift Summary May 12, 2026",2026-05-12 02:43:00,Hall B,https://logbooks.jlab.org/entry/4490171#:~:text=16%3A00
+2026-05-15 16:00:00,16:00,"DAQ unresponsive for 15 minutes, full system reboot required",Other,,4490183,https://logbooks.jlab.org/entry/4490183,"Day Shift Summary May 15, 2026",2026-05-15 01:23:00,Hall C,https://logbooks.jlab.org/entry/4490183#:~:text=16%3A00
+2026-05-10 16:25:00,16:25,"Event rate dropped to zero, MCC beam tuning needed",Other,,4490109,https://logbooks.jlab.org/entry/4490109,"Swing Shift Summary May 10, 2026",2026-05-10 00:09:00,Hall C,https://logbooks.jlab.org/entry/4490109#:~:text=16%3A25
+,,,,,,,,,,
+2026-05-14 21:10:00,14:13,"Veto coincidence peak disappeared, electronics malfunction",Other,,4490237.0,https://logbooks.jlab.org/entry/4490237,"Owl Shift Summary May 14, 2026",2026-05-14 17:47:00,Hall D,https://logbooks.jlab.org/entry/4490237#:~:text=21%3A10
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+2026-05-14 21:10:00,14:13,"Veto coincidence peak disappeared, electronics malfunction",Other,,4490237.0,https://logbooks.jlab.org/entry/4490237,"Owl Shift Summary May 14, 2026",2026-05-14 17:47:00,Hall D,https://logbooks.jlab.org/entry/4490237#:~:text=21%3A10
+2026-05-09 20:05:00,20:05,"Beam loss monitor triggered falsely, safety system lockdown",Other,,4490256,https://logbooks.jlab.org/entry/4490256,"Swing Shift Summary May 09, 2026",2026-05-09 09:48:00,Hall B,https://logbooks.jlab.org/entry/4490256#:~:text=20%3A05
+2026-05-09 16:00:00,16:00,"Live time dropped to 2%, run terminated with insufficient data",Other,,4490228,https://logbooks.jlab.org/entry/4490228,"Swing Shift Summary May 09, 2026",2026-05-09 13:52:00,Hall C,https://logbooks.jlab.org/entry/4490228#:~:text=16%3A00
+2026-05-15 20:10:00,20:10,"Beam loss monitor triggered falsely, safety system lockdown",Other,,4490286,https://logbooks.jlab.org/entry/4490286,"Swing Shift Summary May 15, 2026",2026-05-15 13:31:00,Hall A,https://logbooks.jlab.org/entry/4490286#:~:text=20%3A10
+2026-05-12 18:25:00,18:25,"Multiple detector rates elevated simultaneously, alignment suspected",Other,,4490296,https://logbooks.jlab.org/entry/4490296,"Owl Shift Summary May 12, 2026",2026-05-12 04:26:00,Hall B,https://logbooks.jlab.org/entry/4490296#:~:text=18%3A25
+2026-05-15 18:25:00,18:25,Detector elevated rates,Other,,4490286,https://logbooks.jlab.org/entry/4490286,"Swing Shift Summary May 15, 2026",2026-05-15 13:31:00,Hall A,https://logbooks.jlab.org/entry/4490286#:~:text=18%3A25
+2026-05-15 16:55:00,16:55,Missing event monitoring plots,Other,,4490286,https://logbooks.jlab.org/entry/4490286,"Swing Shift Summary May 15, 2026",2026-05-15 13:31:00,Hall A,https://logbooks.jlab.org/entry/4490286#:~:text=16%3A55
+2026-05-15 19:10:00,19:10,Target cell alignment investigation required,Other,,4490286,https://logbooks.jlab.org/entry/4490286,"Swing Shift Summary May 15, 2026",2026-05-15 13:31:00,Hall A,https://logbooks.jlab.org/entry/4490286#:~:text=19%3A10
+2026-05-12 20:30:00,20:30,"Target rotation mechanism seized, manual intervention required",Other,,4490296,https://logbooks.jlab.org/entry/4490296,"Owl Shift Summary May 12, 2026",2026-05-12 04:26:00,Hall B,https://logbooks.jlab.org/entry/4490296#:~:text=20%3A30
+2026-05-12 20:30:00,20:30,"Target rotation mechanism seized, manual intervention required",Other,,4490296,https://logbooks.jlab.org/entry/4490296,"Owl Shift Summary May 12, 2026",2026-05-12 04:26:00,Hall B,https://logbooks.jlab.org/entry/4490296#:~:text=20%3A30
+2026-05-12 20:30:00,20:30,"Target rotation mechanism seized, manual intervention required",Other,,4490296,https://logbooks.jlab.org/entry/4490296,"Owl Shift Summary May 12, 2026",2026-05-12 04:26:00,Hall B,https://logbooks.jlab.org/entry/4490296#:~:text=20%3A30
+2026-05-15 16:00:00,16:00,"Live time dropped to 2%, run terminated with insufficient data",Other,,4490286,https://logbooks.jlab.org/entry/4490286,"Swing Shift Summary May 15, 2026",2026-05-15 13:31:00,Hall A,https://logbooks.jlab.org/entry/4490286#:~:text=16%3A00
+2026-05-14 22:30:00,14:13,Run 24712 lost to cascading system failures,Other,24712.0,4490237,https://logbooks.jlab.org/entry/4490237,"Owl Shift Summary May 14, 2026",2026-05-14 17:47:00,Hall D,https://logbooks.jlab.org/entry/4490237#:~:text=22%3A30
+2026-05-12 16:00:00,16:00,"DAQ unresponsive, full system reboot required",Other,,4490171,https://logbooks.jlab.org/entry/4490171,"Owl Shift Summary May 12, 2026",2026-05-12 02:43:00,Hall B,https://logbooks.jlab.org/entry/4490171#:~:text=16%3A00
