@@ -32,6 +32,16 @@ data/final_output/
 # Testing
 testing/pipeline_output/
 testing/benchmarks/
+testing/mock_summaries/*.csv
+testing/mock_summaries/*.txt
+testing/benchmarks/graphs/*.png
+testing/benchmarks/graphs/*.json
+testing/test_data/final_output/
+testing/test_data/fixed/
+testing/test_data/processed/
+testing/test_data/raw/
+testing/test_data/verified/
+
 
 # Logs
 *.log
