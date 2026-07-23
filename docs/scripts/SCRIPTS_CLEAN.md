@@ -63,7 +63,6 @@ Interactive cleanup script that removes temporary files, cache, and testing outp
 - `data/final_output/*.csv` - Final pipeline output
 - `data/final_output/*.json` - Any final output files
 - `venv/` - Python virtual environment
-- `accuracy_report_medium_vs_real.csv.json` - Specific test artifact
 
 ---
 
