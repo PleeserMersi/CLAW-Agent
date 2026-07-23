@@ -7,7 +7,7 @@ Complete index of all documentation files organized by category.
 ## Documentation Structure
 
 ### Getting Started (`getting-started/`)
-- **[README.md](../getting-started/README.md)** - Project overview and quick start
+- **[README.md](../../README.md)** - Project overview and quick start
 - **[QUICKSTART.md](../getting-started/QUICKSTART.md)** - 5-minute setup guide
 - **[DASHBOARD.md](../getting-started/DASHBOARD.md)** - Streamlit dashboard guide
 - **[DEVELOPER_TESTING.md](../getting-started/DEVELOPER_TESTING.md)** - Testing guidelines
@@ -49,7 +49,7 @@ Complete index of all documentation files organized by category.
 
 ---
 
-## 📖 Quick Navigation
+## Quick Navigation
 
 ### I want to...
 
@@ -94,7 +94,7 @@ Complete index of all documentation files organized by category.
 
 ---
 
-## 📊 Documentation Statistics
+## Documentation Statistics
 
 | Category | Folder | Files | Total Pages |
 |----------|--------|-------|-------------|
