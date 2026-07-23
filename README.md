@@ -7,41 +7,41 @@
 ## Documentation Index
 
 ### Getting Started (`getting-started/`)
-- [Quick Start Guide](./QUICKSTART.md) - Get up and running in 5 minutes
-- [Dashboard Guide](./DASHBOARD.md) - Streamlit visualization
-- [Developer Testing](./DEVELOPER_TESTING.md) - Testing guidelines
+- [Quick Start Guide](./docs/getting-started/QUICKSTART.md) - Get up and running in 5 minutes
+- [Dashboard Guide](./docs/getting-started/DASHBOARD.md) - Streamlit visualization
+- [Developer Testing](./docs/getting-started/DEVELOPER_TESTING.md) - Testing guidelines
 
 ### Configuration (`config/`)
-- [Installation Guide](../config/INSTALLATION.md) - Detailed setup instructions
-- [Configuration Reference](../config/CONFIGURATION.md) - All configuration options
-- [Environment Variables](../config/ENVIRONMENT.md) - Complete env var reference
-- [Tag Database](../config/TAG_DATABASE.md) - 16 fault categories
-- [Output Formats](../config/OUTPUT_FORMATS.md) - CSV specifications
+- [Installation Guide](./doc/config/INSTALLATION.md) - Detailed setup instructions
+- [Configuration Reference](./docs/config/CONFIGURATION.md) - All configuration options
+- [Environment Variables](./docs/config/ENVIRONMENT.md) - Complete env var reference
+- [Tag Database](./docs/config/TAG_DATABASE.md) - 16 fault categories
+- [Output Formats](./docs/config/OUTPUT_FORMATS.md) - CSV specifications
 
 ### Pipeline (`pipeline/`)
-- [System Architecture](../pipeline/ARCHITECTURE.md) - High-level system design
-- [Running the Pipeline](../pipeline/OPERATIONS_PIPELINE.md) - Execution options & troubleshooting
-- [Data Loading](../pipeline/PIPELINE_DATA_LOADING.md) - JLab API integration
-- [Fault Extraction](../pipeline/PIPELINE_FAULT_EXTRACTION.md) - LLM-based extraction
-- [Fault Filtering](../pipeline/PIPELINE_FAULT_FILTERING.md) - Validation & cleaning
-- [Tag Classification](../pipeline/PIPELINE_TAGGING.md) - ChromaDB semantic tagging
-- [Timestamp Verification](../pipeline/PIPELINE_VERIFICATION.md) - Accuracy checking
-- [Timestamp Fixing](../pipeline/PIPELINE_FIXING.md) - Correction workflow
-- [Consolidation](../pipeline/PIPELINE_CONSOLIDATION.md) - Final output generation
+- [System Architecture](./docs/pipeline/ARCHITECTURE.md) - High-level system design
+- [Running the Pipeline](./docs/pipeline/OPERATIONS_PIPELINE.md) - Execution options & troubleshooting
+- [Data Loading](./docs/pipeline/PIPELINE_DATA_LOADING.md) - JLab API integration
+- [Fault Extraction](./docs/pipeline/PIPELINE_FAULT_EXTRACTION.md) - LLM-based extraction
+- [Fault Filtering](./docs/pipeline/PIPELINE_FAULT_FILTERING.md) - Validation & cleaning
+- [Tag Classification](./docs/pipeline/PIPELINE_TAGGING.md) - ChromaDB semantic tagging
+- [Timestamp Verification](./docs/pipeline/PIPELINE_VERIFICATION.md) - Accuracy checking
+- [Timestamp Fixing](./docs/pipeline/PIPELINE_FIXING.md) - Correction workflow
+- [Consolidation](./docs/pipeline/PIPELINE_CONSOLIDATION.md) - Final output generation
 
 ### Utilities (`utils/`)
-- [LLM Integration](../utils/UTILS_LLM.md) - OpenClaw subprocess calls
-- [Text Processing](../utils/UTILS_TEXT.md) - Timestamp parsing & cleaning
-- [Caching System](../utils/UTILS_CACHE.md) - API response caching
-- [Shutdown Handling](../utils/UTILS_SHUTDOWN.md) - Graceful interrupt handling
-- [Link Generation](../utils/UTILS_LINKS.md) - Text fragment URLs
+- [LLM Integration](./docs/utils/UTILS_LLM.md) - OpenClaw subprocess calls
+- [Text Processing](./docs/utils/UTILS_TEXT.md) - Timestamp parsing & cleaning
+- [Caching System](./docs/utils/UTILS_CACHE.md) - API response caching
+- [Shutdown Handling](./docs/utils/UTILS_SHUTDOWN.md) - Graceful interrupt handling
+- [Link Generation](./docs/utils/UTILS_LINKS.md) - Text fragment URLs
 
 ### Scripts (`scripts/`)
-- [Pipeline Runner](../scripts/SCRIPTS_PIPELINE.md) - run_pipeline.sh reference + cron scheduling
-- [Auto Run Script](../scripts/SCRIPTS_AUTO.md) - Scheduled execution
-- [Dashboard Manager](../scripts/SCRIPTS_DASHBOARD.md) - Deployment automation
-- [Data Cleanup](../scripts/SCRIPTS_CLEAN.md) - Maintenance scripts
-- [Test Runner](../scripts/SCRIPTS_TESTS.md) - Full test suite
+- [Pipeline Runner](./docs/scripts/SCRIPTS_PIPELINE.md) - run_pipeline.sh reference + cron scheduling
+- [Auto Run Script](./docs/scripts/SCRIPTS_AUTO.md) - Scheduled execution
+- [Dashboard Manager](./docs/scripts/SCRIPTS_DASHBOARD.md) - Deployment automation
+- [Data Cleanup](./docs/scripts/SCRIPTS_CLEAN.md) - Maintenance scripts
+- [Test Runner](./docs/scripts/SCRIPTS_TESTS.md) - Full test suite
 
 ---
 
