@@ -147,10 +147,10 @@ Add to crontab (`crontab -e`):
 
 ```bash
 # Run pipeline daily at 2 AM with filtering
-0 2 * * * cd /home/sec-researchonly/Desktop/CLAW-Agent && ./scripts/run_pipeline.sh --filter >> logs/pipeline.log 2>&1
+0 2 * * * cd CLAW-Agent && ./scripts/run_pipeline.sh --filter >> logs/pipeline.log 2>&1
 
 # Run without filtering (faster)
-0 2 * * * cd /home/sec-researchonly/Desktop/CLAW-Agent && ./scripts/run_pipeline.sh >> logs/pipeline.log 2>&1
+0 2 * * * cd CLAW-Agent && ./scripts/run_pipeline.sh >> logs/pipeline.log 2>&1
 ```
 
 **Note**: Ensure SSH tunnel is available if JLab API requires it. Consider creating a separate cron job for tunnel setup.
@@ -166,10 +166,10 @@ After=network.target
 
 [Service]
 Type=oneshot
-User=sec-researchonly
-WorkingDirectory=/home/sec-researchonly/Desktop/CLAW-Agent
-ExecStart=/home/sec-researchonly/Desktop/CLAW-Agent/scripts/run_pipeline.sh --filter
-Environment=HOME=/home/sec-researchonly
+User=<user>
+WorkingDirectory=CLAW-Agent
+ExecStart=CLAW-Agent/scripts/run_pipeline.sh --filter
+Environment=HOME=/home
 ```
 
 Create `/etc/systemd/system/claw-pipeline.timer`:
