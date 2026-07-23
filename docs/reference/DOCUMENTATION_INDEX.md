@@ -111,21 +111,21 @@ Complete index of all documentation files organized by category.
 ## Recommended Reading Order
 
 ### For New Users
-1. `getting-started/README.md`
+1. `README.md`
 2. `getting-started/QUICKSTART.md`
 3. `config/INSTALLATION.md`
 4. `pipeline/OPERATIONS_PIPELINE.md`
 5. `getting-started/DASHBOARD.md`
 
 ### For Developers
-1. `getting-started/README.md`
+1. `README.md`
 2. `pipeline/ARCHITECTURE.md`
 3. `pipeline/PIPELINE_FAULT_EXTRACTION.md`
 4. `pipeline/PIPELINE_TAGGING.md`
 5. `config/CONFIGURATION.md`
 
 ### For Administrators
-1. `getting-started/README.md`
+1. `README.md`
 2. `config/CONFIGURATION.md`
 3. `pipeline/OPERATIONS_PIPELINE.md`
 4. `config/ENVIRONMENT.md`
