@@ -17,7 +17,7 @@ Manage daily automated runs of the CLAW-Agent pipeline using cron.
 ## Location
 
 ```bash
-/home/sec-researchonly/Desktop/CLAW-Agent/scripts/outside_cron.sh
+CLAW-Agent/scripts/outside_cron.sh
 ```
 
 ---
@@ -71,12 +71,12 @@ Shows whether a cron job is active and displays the current schedule.
 When you set a schedule (e.g., `02:00`), the script creates this cron entry:
 
 ```cron
-0 2 * * * cd /home/sec-researchonly/Desktop/CLAW-Agent && ./scripts/run_pipeline.sh >> /home/sec-researchonly/Desktop/CLAW-Agent/cron_pipeline.log 2>&1
+0 2 * * * cd CLAW-Agent && ./scripts/run_pipeline.sh >> CLAW-Agent/cron_pipeline.log 2>&1
 ```
 
 **Breakdown:**
 - `0 2 * * *` - Run at 2:00 AM every day
-- `cd /home/sec-researchonly/Desktop/CLAW-Agent` - Change to project root
+- `cd CLAW-Agent` - Change to project root
 - `./scripts/run_pipeline.sh` - Execute the pipeline
 - `>> cron_pipeline.log 2>&1` - Append all output (stdout + stderr) to log file
 
@@ -85,7 +85,7 @@ When you set a schedule (e.g., `02:00`), the script creates this cron entry:
 All cron job output is written to:
 
 ```bash
-/home/sec-researchonly/Desktop/CLAW-Agent/cron_pipeline.log
+CLAW-Agent/cron_pipeline.log
 ```
 
 **View recent logs:**
@@ -127,7 +127,7 @@ local cron_entry="$minute $hour * * * cd $PROJECT_ROOT && $PIPELINE_SCRIPT --fil
 ```bash
 # Create scripts/cron_pipeline_wrapper.sh
 #!/bin/bash
-cd /home/sec-researchonly/Desktop/CLAW-Agent
+cd CLAW-Agent
 ./scripts/run_pipeline.sh --filter --extract-size 10 --tag-size 20
 ```
 
@@ -190,7 +190,7 @@ If you need a different time zone, set it in the cron entry:
 ```cron
 # Run at 2:00 AM America/New_York
 CRON_TZ=America/New_York
-0 2 * * * cd /home/sec-researchonly/Desktop/CLAW-Agent && ./scripts/run_pipeline.sh >> cron_pipeline.log 2>&1
+0 2 * * * cd CLAW-Agent && ./scripts/run_pipeline.sh >> cron_pipeline.log 2>&1
 ```
 
 ### "Multiple cron jobs created"
@@ -223,7 +223,7 @@ The log file grows over time. Set up log rotation:
 
 ```bash
 # Add to /etc/logrotate.d/claw-agent
-/home/sec-researchonly/Desktop/CLAW-Agent/cron_pipeline.log {
+CLAW-Agent/cron_pipeline.log {
     daily
     rotate 30
     compress
@@ -237,7 +237,7 @@ Or manually clean old logs:
 
 ```bash
 # Keep only last 7 days
-find /home/sec-researchonly/Desktop/CLAW-Agent -name "cron_pipeline.log*" -mtime +7 -delete
+find CLAW-Agent -name "cron_pipeline.log*" -mtime +7 -delete
 ```
 
 ### Monitoring
@@ -256,7 +256,7 @@ grep -i "error" cron_pipeline.log | tail -20
 **Set up alerting (optional):**
 ```bash
 # Add to crontab to check for errors daily
-0 9 * * * grep -i "error" /home/sec-researchonly/Desktop/CLAW-Agent/cron_pipeline.log | tail -10 | mail -s "CLAW-Agent Errors" your@email.com
+0 9 * * * grep -i "error" CLAW-Agent/cron_pipeline.log | tail -10 | mail -s "CLAW-Agent Errors" your@email.com
 ```
 
 ---
