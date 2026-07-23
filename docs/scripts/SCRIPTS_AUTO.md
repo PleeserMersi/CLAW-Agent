@@ -146,7 +146,7 @@ If all retries fail, the scheduler waits until the next scheduled day.
 
 2. **Stop File** (for remote termination)
    ```bash
-   touch /home/sec-researchonly/Desktop/CLAW-Agent/.stop_scheduler
+   touch CLAW-Agent/.stop_scheduler
    ```
 
 3. **Kill Signal** (SIGTERM)
