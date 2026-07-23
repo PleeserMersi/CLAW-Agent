@@ -12,7 +12,7 @@
 - [Developer Testing](./docs/getting-started/DEVELOPER_TESTING.md) - Testing guidelines
 
 ### Configuration (`config/`)
-- [Installation Guide](./doc/config/INSTALLATION.md) - Detailed setup instructions
+- [Installation Guide](./docs/config/INSTALLATION.md) - Detailed setup instructions
 - [Configuration Reference](./docs/config/CONFIGURATION.md) - All configuration options
 - [Environment Variables](./docs/config/ENVIRONMENT.md) - Complete env var reference
 - [Tag Database](./docs/config/TAG_DATABASE.md) - 16 fault categories
