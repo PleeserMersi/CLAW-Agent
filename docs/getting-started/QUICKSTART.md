@@ -18,7 +18,7 @@ Get CLAW-Agent up and running in 5 minutes.
 ## Step 1: Clone/Navigate to Project
 
 ```bash
-cd /home/sec-researchonly/Desktop/CLAW-Agent
+cd CLAW-Agent
 ```
 
 ---
