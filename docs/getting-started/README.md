@@ -163,7 +163,7 @@ CLAW-Agent/
 
 ```bash
 # 1. Clone and setup
-cd /home/sec-researchonly/Desktop/CLAW-Agent
+cd CLAW-Agent
 cp .env.example .env
 # Edit .env with your credentials
 
