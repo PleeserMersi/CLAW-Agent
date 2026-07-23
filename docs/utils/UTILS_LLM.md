@@ -166,16 +166,16 @@ All LLM prompts are centralized in `PROMPT_TEMPLATES` dictionary for consistency
 
 | Template Name | Purpose | Batch Support |
 |---------------|---------|---------------|
-| `fault_extraction` | Extract faults from single shift summary | ❌ No |
-| `fault_extraction_batch` | Extract faults from multiple summaries | ✅ Yes |
-| `tagger_prompt` | Classify single fault into tag category | ❌ No |
-| `tagger_batch` | Classify multiple faults | ✅ Yes |
-| `timestamp_verification` | Verify single timestamp accuracy | ❌ No |
-| `timestamp_verification_batch` | Verify multiple timestamps | ✅ Yes |
-| `timestamp_correction` | Extract correct timestamp for single fault | ❌ No |
-| `timestamp_correction_batch` | Extract timestamps for multiple faults | ✅ Yes |
-| `fault_validation` | Validate if single entry is a fault | ❌ No |
-| `fault_validation_batch` | Validate multiple entries | ✅ Yes |
+| `fault_extraction` | Extract faults from single shift summary | No |
+| `fault_extraction_batch` | Extract faults from multiple summaries | Yes |
+| `tagger_prompt` | Classify single fault into tag category | No |
+| `tagger_batch` | Classify multiple faults | Yes |
+| `timestamp_verification` | Verify single timestamp accuracy | No |
+| `timestamp_verification_batch` | Verify multiple timestamps | Yes |
+| `timestamp_correction` | Extract correct timestamp for single fault | No |
+| `timestamp_correction_batch` | Extract timestamps for multiple faults | Yes |
+| `fault_validation` | Validate if single entry is a fault | No |
+| `fault_validation_batch` | Validate multiple entries | Yes |
 
 ### Template Usage
 
