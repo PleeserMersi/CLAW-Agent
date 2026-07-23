@@ -209,7 +209,7 @@ All documentation includes:
 
 ---
 
-## 📞 Support
+## Support
 
 For questions not covered in documentation:
 1. Check the relevant pipeline stage documentation
