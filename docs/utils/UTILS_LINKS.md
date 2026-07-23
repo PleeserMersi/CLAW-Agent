@@ -42,11 +42,9 @@ https://example.com/page#:~:text=fragment
 | Text with prefix/suffix | `#:~:text=prefix-,target,suffix` | Link to "target" with context |
 
 **Browser Support** (as of 2026):
-- ✅ Chrome 80+
-- ✅ Edge 80+
-- ✅ Opera 67+
-- ❌ Firefox (not yet supported)
-- ❌ Safari (not yet supported)
+- Chrome 80+
+- Edge 80+
+- Opera 67+
 
 **Example**:
 ```
