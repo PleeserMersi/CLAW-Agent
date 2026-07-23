@@ -154,7 +154,9 @@ CLAW-Agent/
 ├── testing/                     # Test data and fixtures
 ├── .env                         # Environment configuration
 ├── requirements.txt             # Python dependencies
-└── docs/                        # This documentation
+├── docs/                        # All documentation
+└── README.md                    # This file
+
 ```
 
 ---
