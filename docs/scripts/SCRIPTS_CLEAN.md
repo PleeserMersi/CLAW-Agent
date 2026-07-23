@@ -59,7 +59,7 @@ Interactive cleanup script that removes temporary files, cache, and testing outp
 
 ### Files Preserved
 
-✅ **Always kept**:
+**Always kept**:
 - `data/final_output/*.csv` - Final pipeline output
 - `data/final_output/*.json` - Any final output files
 - `venv/` - Python virtual environment
