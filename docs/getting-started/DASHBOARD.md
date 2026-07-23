@@ -12,7 +12,7 @@ The dashboard provides comprehensive interactive visualization of fault data wit
 
 **Launch Command**:
 ```bash
-cd /home/sec-researchonly/Desktop/CLAW-Agent
+cd CLAW-Agent
 python3 -m streamlit run src/frontend/app.py
 ```
 
@@ -127,7 +127,7 @@ Each hall tab includes an expandable table view with:
 ### Launch Dashboard
 
 ```bash
-cd /home/sec-researchonly/Desktop/CLAW-Agent
+cd CLAW-Agent
 python3 -m streamlit run src/frontend/app.py
 ```
 
