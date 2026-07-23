@@ -726,7 +726,7 @@ def test_interruptible_sleep():
 
 ```bash
 # Test graceful shutdown
-cd /home/sec-researchonly/Desktop/CLAW-Agent
+cd CLAW-Agent
 python3 -c "
 from utils.shutdown import setup_shutdown_handler, is_shutdown_requested
 import time
