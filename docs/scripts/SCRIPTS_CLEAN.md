@@ -55,7 +55,6 @@ Interactive cleanup script that removes temporary files, cache, and testing outp
 - `testing/mock_summaries/*/SUMMARY.txt` - Mock summary files
 - `testing/*.png` - Test graphs and visualizations
 - `testing/*.csv`, `*.json` - Test data files
-- **Excluded**: `accuracy_report_medium_vs_real.csv.json` (preserved)
 
 ### Files Preserved
 
