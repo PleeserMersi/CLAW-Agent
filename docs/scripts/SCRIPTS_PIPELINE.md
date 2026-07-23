@@ -43,7 +43,6 @@ Main entry point for running the CLAW-Agent fault extraction pipeline. Handles v
 | Option | Default | Description |
 |--------|---------|-------------|
 | `--verbose` | Off | Enable verbose logging |
-| `--no-tunnel` | Off | Skip SSH tunnel creation |
 | `--filter` | Off | Enable fault filtering step |
 | `--agent NAME` | (none) | Agent name for all stages |
 | `--extract-size N` | 5 | Batch size for extraction |
