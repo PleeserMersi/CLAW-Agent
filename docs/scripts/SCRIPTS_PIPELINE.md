@@ -104,11 +104,11 @@ $ ./scripts/outside_cron.sh 02:00
 ✓ Cron job created successfully!
 
 Schedule: Daily at 02:00
-Script: /home/sec-researchonly/Desktop/CLAW-Agent/scripts/run_pipeline.sh
-Log file: /home/sec-researchonly/Desktop/CLAW-Agent/cron_pipeline.log
+Script: CLAW-Agent/scripts/run_pipeline.sh
+Log file: CLAW-Agent/cron_pipeline.log
 
 Current crontab:
-  0 2 * * * cd /home/sec-researchonly/Desktop/CLAW-Agent && /home/sec-researchonly/Desktop/CLAW-Agent/scripts/run_pipeline.sh >> /home/sec-researchonly/Desktop/CLAW-Agent/cron_pipeline.log 2>&1
+  0 2 * * * cd CLAW-Agent && CLAW-Agent/scripts/run_pipeline.sh >> CLAW-Agent/cron_pipeline.log 2>&1
 ```
 
 ### Log File
