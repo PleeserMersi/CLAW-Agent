@@ -299,7 +299,7 @@ clear_shutdown()
 # Now is_shutdown_requested() returns False
 ```
 
-**⚠️ Warning**: **Use only for testing or recovery**, not in production code.
+**Warning**: **Use only for testing or recovery**, not in production code.
 
 **Use Cases**:
 - **Unit testing**: Reset state between test cases
@@ -308,7 +308,7 @@ clear_shutdown()
 
 **Never Use In Production**:
 ```python
-# ❌ BAD: Clearing shutdown in production code
+# BAD: Clearing shutdown in production code
 while True:
     if is_shutdown_requested():
         clear_shutdown()  # Never do this!
