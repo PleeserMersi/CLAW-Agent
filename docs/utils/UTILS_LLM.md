@@ -141,10 +141,10 @@ while elapsed < wait_time:
 
 | Error Type | Retry? | Reason |
 |------------|--------|--------|
-| `subprocess.TimeoutExpired` | ✅ Yes | Transient timeout, might succeed next time |
-| Subprocess non-zero exit | ✅ Yes | Transient error, might be network/agent issue |
-| `FileNotFoundError` (openclaw not found) | ❌ No | Permanent error, retry won't help |
-| Shutdown requested | ❌ No | User requested stop, abort immediately |
+| `subprocess.TimeoutExpired` | Yes | Transient timeout, might succeed next time |
+| Subprocess non-zero exit | Yes | Transient error, might be network/agent issue |
+| `FileNotFoundError` (openclaw not found) | No | Permanent error, retry won't help |
+| Shutdown requested | No | User requested stop, abort immediately |
 
 ### Sample Retry Log Output
 
