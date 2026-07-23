@@ -152,7 +152,7 @@ CLAW-Agent/
 │   ├── clean_data.sh            # Data cleanup
 │   └── run_all_tests.sh         # Test suite
 ├── testing/                     # Test data and fixtures
-├── .env                         # Environment configuration
+├── .env.example                 # Example environment configuration
 ├── requirements.txt             # Python dependencies
 ├── docs/                        # All documentation
 └── README.md                    # This file
