@@ -25,7 +25,7 @@ Complete installation and setup instructions for CLAW-Agent.
 ### 1. Clone/Navigate to Project
 
 ```bash
-cd /home/sec-researchonly/Desktop/CLAW-Agent
+cd CLAW-Agent
 ```
 
 ### 2. Create Virtual Environment
@@ -194,8 +194,8 @@ mkdir -p logs
 Add to `~/.bashrc`:
 ```bash
 # CLAW-Agent virtual environment
-if [ -d /home/sec-researchonly/Desktop/CLAW-Agent/venv ]; then
-    alias claw='cd /home/sec-researchonly/Desktop/CLAW-Agent && source venv/bin/activate'
+if [ -d CLAW-Agent/venv ]; then
+    alias claw='cd CLAW-Agent && source venv/bin/activate'
 fi
 ```
 
@@ -223,14 +223,14 @@ cat data/final_output/all_shift_faults.csv
 ### Remove Virtual Environment
 
 ```bash
-cd /home/sec-researchonly/Desktop/CLAW-Agent
+cd CLAW-Agent
 rm -rf venv
 ```
 
 ### Remove Project
 
 ```bash
-rm -rf /home/sec-researchonly/Desktop/CLAW-Agent
+rm -rf CLAW-Agent
 ```
 
 ### Clean Dependencies (if installed globally)
