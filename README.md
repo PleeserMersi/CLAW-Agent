@@ -228,4 +228,4 @@ FullTimestamp,timestamp,description,tag,run_number,ShiftLogNumber,verification_s
 
 ## Full Documentation Index
 
-For a complete index with all cross-references, see [`reference/DOCUMENTATION_INDEX.md`](../reference/DOCUMENTATION_INDEX.md).
+For a complete index with all cross-references, see [`reference/DOCUMENTATION_INDEX.md`](./docs/reference/DOCUMENTATION_INDEX.md).
