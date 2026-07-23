@@ -590,7 +590,7 @@ def test_call_llm_shutdown_interrupts():
 
 ```bash
 # Test basic call
-cd /home/sec-researchonly/Desktop/CLAW-Agent
+cd CLAW-Agent
 python3 -c "
 from utils.llm_utils import call_llm
 response = call_llm('Hello, what is 2+2?', timeout_seconds=60)
