@@ -148,6 +148,7 @@ CLAW-Agent/
 ├── scripts/                     # Shell scripts
 │   ├── run_pipeline.sh          # Pipeline runner
 │   ├── auto_run.sh              # Scheduled execution
+│   ├── outside_cron.sh          # Outside cron job execution
 │   ├── manage_dashboard.sh      # Dashboard deployment
 │   ├── clean_data.sh            # Data cleanup
 │   └── run_all_tests.sh         # Test suite
