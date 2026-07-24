@@ -31,7 +31,7 @@ data/final_output/
 
 # Testing
 testing/pipeline_output/
-testing/benchmarks/
+testing/benchmarks/accuracy_data.json
 testing/mock_summaries/*.csv
 testing/mock_summaries/*.txt
 testing/benchmarks/graphs/*.png
