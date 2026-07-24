@@ -9,10 +9,10 @@ from pathlib import Path
 
 def setup_logging(log_file=None, level=logging.INFO):
     """
-    Configure logging with both file and console handlers.
+    Configure logging with console handler only.
     
     Args:
-        log_file: Optional path to log file. If None, uses default location.
+        log_file: Ignored. File logging is disabled.
         level: Logging level (default: INFO)
     
     Returns:
@@ -31,20 +31,11 @@ def setup_logging(log_file=None, level=logging.INFO):
         datefmt='%Y-%m-%d %H:%M:%S'
     )
     
-    # Console handler
+    # Console handler only (no file logging)
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(level)
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
-    
-    # File handler (optional)
-    if log_file:
-        log_path = Path(log_file)
-        log_path.parent.mkdir(parents=True, exist_ok=True)
-        file_handler = logging.FileHandler(log_path)
-        file_handler.setLevel(level)
-        file_handler.setFormatter(formatter)
-        logger.addHandler(file_handler)
     
     return logger
 

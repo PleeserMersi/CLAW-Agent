@@ -28,9 +28,8 @@ cd "$PROJECT_ROOT"
 # Default schedule: noon (12:00 PM)
 SCHEDULE_TIME="12:00"
 
-# Retry and logging configuration
+# Retry configuration
 MAX_RETRIES=3
-LOG_FILE="$PROJECT_ROOT/logs/auto_run.log"
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
@@ -47,10 +46,7 @@ while [[ $# -gt 0 ]]; do
             MAX_RETRIES="$2"
             shift 2
             ;;
-        --log-file)
-            LOG_FILE="$2"
-            shift 2
-            ;;
+
         --help)
             echo "Usage: ./auto_run.sh [OPTIONS]"
             echo ""
@@ -60,7 +56,7 @@ while [[ $# -gt 0 ]]; do
             echo "  --start-time HH:MM    Schedule time in 24-hour format (default: 12:00)"
             echo "  --agent NAME          Pass agent name to pipeline"
             echo "  --max-retries N       Max retries on failure (default: 3)"
-            echo "  --log-file PATH       Custom log file path"
+
             echo ""
             echo "Examples:"
             echo "  ./auto_run.sh                         # Run daily at noon"
@@ -112,20 +108,14 @@ wait_until_scheduled_time() {
     done
 }
 
-# Logging function
+# Logging function (console only)
 log() {
     local level="$1"
     local message="$2"
     local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
     local log_line="[$timestamp] [$level] $message"
     
-    # Ensure log directory exists
-    mkdir -p "$(dirname "$LOG_FILE")"
-    
-    # Write to log file
-    echo "$log_line" >> "$LOG_FILE"
-    
-    # Also print to console
+    # Print to console only
     echo "$log_line"
 }
 
@@ -218,7 +208,7 @@ log "INFO" "Configuration:"
 log "INFO" "  Schedule: Daily at $SCHEDULE_TIME"
 log "INFO" "  Agent:    ${AGENT:-default}"
 log "INFO" "  Max Retries: $MAX_RETRIES"
-log "INFO" "  Log File: $LOG_FILE"
+
 log "INFO" ""
 log "INFO" "Press Ctrl+C to stop."
 log "INFO" "Waiting for scheduled time..."
