@@ -31,6 +31,7 @@ data/final_output/
 
 # Testing
 testing/pipeline_output/
+testing/tag_db
 testing/benchmarks/accuracy_data.json
 testing/mock_summaries/*.csv
 testing/mock_summaries/*.txt
