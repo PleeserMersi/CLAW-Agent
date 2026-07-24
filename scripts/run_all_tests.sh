@@ -71,6 +71,10 @@ while [[ $# -gt 0 ]]; do
             RUNS_ARG="--runs $2"
             shift 2
             ;;
+        --difficulties)
+            LEVELS="$2"
+            shift 2
+            ;;
         --batch-only)
             MODE="batch_only"
             shift
@@ -96,6 +100,8 @@ while [[ $# -gt 0 ]]; do
             echo "  --verbose          Enable verbose logging"
             echo "  --force-regenerate Force regenerate mock data (deletes existing first)"
             echo "  --runs <n>         Number of runs per configuration (default: $RUNS)"
+            echo "  --difficulties     Space-separated difficulty levels (default: 'easy medium hard')"
+            echo "                     Example: --difficulties 'easy medium' or --difficulties 'hard'"
             echo "  --batch-only       Run only batch size testing (ignores --parallel-sizes)"
             echo "  --parallel-only    Run only parallel workers testing (ignores --batch-sizes)"
             echo "  --parallel-sizes   Custom parallel worker counts (e.g., '1 2 4 8')"
@@ -104,15 +110,17 @@ while [[ $# -gt 0 ]]; do
             echo ""
             echo "Argument Independence:"
             echo "  - --batch-sizes and --parallel-sizes are independent and can be combined"
+            echo "  - --difficulties sets which fault difficulty levels to test"
             echo "  - --batch-only ignores --parallel-sizes (runs only batch tests)"
             echo "  - --parallel-only ignores --batch-sizes (runs only parallel tests)"
             echo "  - Without --batch-only/--parallel-only, both size arguments are used (comprehensive mode)"
             echo ""
             echo "Examples:"
             echo "  ./run_all_tests.sh                           # Comprehensive: batch 1-20 + parallel 1-10"
-            echo "  ./run_all_tests.sh --batch-sizes '5 10 15'   # Comprehensive: batch 5,10,15 + parallel 1-10"
+            echo "  ./run_all_tests.sh --difficulties 'easy hard' # Test only easy and hard difficulties"
+            echo "  ./run_all_tests.sh --batch-sizes '1 2 4 8'   # Comprehensive: batch 1,2,4,8 + parallel 1-10"
             echo "  ./run_all_tests.sh --parallel-sizes '2 4 8'  # Comprehensive: batch 1-20 + parallel 2,4,8"
-            echo "  ./run_all_tests.sh --batch-sizes '10' --parallel-sizes '4'  # Comprehensive: batch 10 + parallel 4"
+            echo "  ./run_all_tests.sh --difficulties 'medium' --batch-sizes '5 10'"
             echo "  ./run_all_tests.sh --batch-only --batch-sizes '5 10'        # Batch-only: 5,10 (ignores parallel)"
             echo "  ./run_all_tests.sh --parallel-only --parallel-sizes '2 4'   # Parallel-only: 2,4 (ignores batch)"
             echo ""
@@ -135,8 +143,9 @@ echo "=========================================="
 echo ""
 echo "Configuration:"
 echo "  Mode: $MODE"
+echo "  Difficulty levels: $LEVELS"
 if [ "$MODE" == "comprehensive" ]; then
-    echo "  Phase 1: Batch sizes $BATCH_SIZES for all difficulties ($RUNS runs each)"
+    echo "  Phase 1: Batch sizes $BATCH_SIZES for difficulties ($LEVELS) ($RUNS runs each)"
     echo "  Phase 2: Parallel workers ($PARALLEL_SIZES) for medium (batch=5, $RUNS runs each)"
 elif [ "$MODE" == "batch_only" ]; then
     echo "  Batch sizes: $BATCH_SIZES"

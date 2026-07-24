@@ -52,8 +52,9 @@ ACCURACY_TESTER_DIR = TEST_DIR / "accuracy_tester"
 BENCHMARKS_DIR = TEST_DIR / "benchmarks"
 TEST_OUTPUT_DIR = TEST_DIR / "pipeline_output"
 
-# Ensure output directories exist
+# Ensure all output directories exist
 TEST_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+BENCHMARKS_DIR.mkdir(parents=True, exist_ok=True)
 
 # Global flag for graceful interrupt
 interrupted = False
@@ -330,7 +331,6 @@ def run_pipeline_with_mock_data(
     if SHIFT_SUMMARY_CSV.exists():
         original_backup = Path(str(SHIFT_SUMMARY_CSV) + ".backup")
         shutil.copy(SHIFT_SUMMARY_CSV, original_backup)
-        logger.info(f"Backed up original {SHIFT_SUMMARY_CSV}")
     
     # Copy mock data to expected location
     shutil.copy(mock_csv_path, SHIFT_SUMMARY_CSV)

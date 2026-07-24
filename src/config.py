@@ -55,6 +55,9 @@ API_DELAY_SECONDS = 0.5
 JLAB_USERNAME = os.getenv("JLAB_USERNAME", None)
 JLAB_PASSWORD = os.getenv("JLAB_PASSWORD", None)
 
+# Logging Configuration
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
+
 # Single agent for all pipeline stages
 AGENT_NAME = os.getenv("AGENT_NAME", "fault_analyst")
 
@@ -81,6 +84,11 @@ VLLM_API_KEY = os.getenv("VLLM_API_KEY", None)
 # Dynamically loads SSH_TUNNEL_N_LOCAL and SSH_TUNNEL_N_REMOTE pairs
 SSH_USERNAME = os.getenv("SSH_USERNAME", None)
 SSH_HOST = os.getenv("SSH_HOST", None)
+
+# SSH Port Conflict Behavior
+# If true: Force-close any processes using the configured tunnel ports before establishing the tunnel
+# If false: Skip tunnel creation if ports are already in use (pipeline continues without tunneling)
+SSH_FORCE_CLOSE_PORTS = os.getenv("SSH_FORCE_CLOSE_PORTS", "true").lower() == "true"
 
 def _parse_ssh_tunnels() -> list:
     """
@@ -156,25 +164,46 @@ def validate_config() -> List[str]:
         elif not os.access(dir_path, os.W_OK):
             issues.append(f"ERROR: No write permission for {dir_name} directory: {dir_path}")
     
-    # Check authentication
-    if JLAB_USERNAME is None:
-        issues.append("WARNING: JLAB_USERNAME not set. API authentication may fail.")
-    if JLAB_PASSWORD is None:
-        issues.append("WARNING: JLAB_PASSWORD not set. API authentication may fail.")
+    # Check required JLab credentials
+    if JLAB_USERNAME is None or JLAB_USERNAME.strip() == "":
+        issues.append("ERROR: JLAB_USERNAME is not set. Please set it in .env file.")
+    if JLAB_PASSWORD is None or JLAB_PASSWORD.strip() == "":
+        issues.append("ERROR: JLAB_PASSWORD is not set. Please set it in .env file.")
     
-    # Check agent configuration
-    if not AGENT_NAME:
-        issues.append("ERROR: AGENT_NAME is empty or not set.")
+    # Check LOG_LEVEL
+    if LOG_LEVEL is None or LOG_LEVEL.strip() == "":
+        issues.append("ERROR: LOG_LEVEL is not set. Please set it in .env file (e.g., INFO, DEBUG, WARNING).")
+    elif LOG_LEVEL.upper() not in ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]:
+        issues.append(f"WARNING: LOG_LEVEL '{LOG_LEVEL}' may be invalid. Expected: DEBUG, INFO, WARNING, ERROR, or CRITICAL.")
     
-    # Check LLM configuration (either OpenClaw OR vLLM must be set)
-    if not OPENCLAW_CMD and not USE_VLLM_DIRECTLY:
-        issues.append("ERROR: Neither OPENCLAW_PATH nor vLLM configuration is set.")
-    elif not OPENCLAW_CMD and USE_VLLM_DIRECTLY:
-        # vLLM mode: check vLLM configuration
+    # Check LLM configuration: either (AGENT_NAME + OPENCLAW_PATH) OR (VLLM_BASE_URL + VLLM_MODEL_NAME)
+    has_openclaw = AGENT_NAME and OPENCLAW_CMD
+    has_vllm = VLLM_BASE_URL and VLLM_MODEL_NAME
+    
+    if not has_openclaw and not has_vllm:
+        issues.append("ERROR: LLM configuration missing. You must provide EITHER:")
+        issues.append("  - AGENT_NAME and OPENCLAW_PATH (for OpenClaw CLI mode), OR")
+        issues.append("  - VLLM_BASE_URL and VLLM_MODEL_NAME (for direct vLLM API mode)")
+    elif has_openclaw and has_vllm:
+        # Both modes configured - prefer OpenClaw if OPENCLAW_PATH is set
+        issues.append("WARNING: Both OpenClaw and vLLM configurations are set. Using OpenClaw CLI mode.")
+    elif has_vllm and not has_openclaw:
+        # vLLM mode only
         if not VLLM_BASE_URL:
             issues.append("ERROR: VLLM_BASE_URL is not set (required for vLLM mode).")
         if not VLLM_MODEL_NAME:
             issues.append("ERROR: VLLM_MODEL_NAME is not set (required for vLLM mode).")
+    elif has_openclaw and not has_vllm:
+        # OpenClaw mode only
+        if not AGENT_NAME:
+            issues.append("ERROR: AGENT_NAME is not set (required for OpenClaw mode).")
+        if not OPENCLAW_CMD:
+            issues.append("ERROR: OPENCLAW_PATH is not set (required for OpenClaw mode).")
+    
+    # Check agent configuration (for OpenClaw mode)
+    if AGENT_NAME is None or AGENT_NAME.strip() == "":
+        if OPENCLAW_CMD:  # Only error if using OpenClaw mode
+            issues.append("ERROR: AGENT_NAME is empty or not set (required for OpenClaw CLI mode).")
     
     # Check SSH tunnel configuration (only if SSH_USERNAME is set)
     if SSH_USERNAME and not SSH_HOST:
@@ -227,12 +256,17 @@ def validate_config_strict() -> bool:
     errors = [msg for msg in issues if msg.startswith("ERROR")]
     
     if errors:
-        error_msg = "\n".join(["Configuration validation failed:"] + errors)
+        error_msg = "\n".join(["\n" + "="*60, "CONFIGURATION VALIDATION FAILED:", "="*60, ""] + errors + ["", "Please fix the above errors in your .env file before running the pipeline.", "="*60 + "\n"])
         raise ValueError(error_msg)
     
     # Print warnings
     warnings = [msg for msg in issues if msg.startswith("WARNING")]
-    for warning in warnings:
-        print(f"{warning}")
+    if warnings:
+        print("\n" + "="*60)
+        print("CONFIGURATION WARNINGS:")
+        print("="*60)
+        for warning in warnings:
+            print(f"  {warning}")
+        print("="*60 + "\n")
     
     return True

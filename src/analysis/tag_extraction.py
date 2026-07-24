@@ -26,24 +26,42 @@ TAG_DB_DIR = BASE_DIR / "tag_db"
 TAG_DB_PATH = TAG_DB_DIR / "tags.json"
 CHROMA_DB_PATH = TAG_DB_DIR / "chroma_db"
 
+# Tag database search paths - always check the main project's tag_db directory
+# This path is relative to the project root (parent of src/)
+PROJECT_ROOT = BASE_DIR.parent if BASE_DIR.name == "testing" else BASE_DIR
+TESTING_TAG_DB_PATH = PROJECT_ROOT / "tag_db" / "tags.json"
+MAIN_TAG_DB_PATH = BASE_DIR / "tag_db" / "tags.json"
+
 
 def load_tag_database() -> List[Dict[str, Any]]:
     """
     Load the tag database from JSON file.
     
+    Checks the main project's tag_db directory first (CLAW-Agent/tag_db/tags.json),
+    then falls back to the testing directory if running in testing mode.
+    
     Returns:
         List of tag dictionaries
     """
-    if not TAG_DB_PATH.exists():
-        logger.warning(f"Tag database not found at {TAG_DB_PATH}")
-        return []
+    # First check the main project's tag_db directory (CLAW-Agent/tag_db/tags.json)
+    if TESTING_TAG_DB_PATH.exists():
+        try:
+            with open(TESTING_TAG_DB_PATH, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            logger.error(f"Failed to load tag database from project root: {e}")
     
-    try:
-        with open(TAG_DB_PATH, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except Exception as e:
-        logger.error(f"Failed to load tag database: {e}")
-        return []
+    # Fall back to main tag_db in current BASE_DIR
+    if MAIN_TAG_DB_PATH.exists():
+        try:
+            with open(MAIN_TAG_DB_PATH, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            logger.error(f"Failed to load tag database: {e}")
+    
+    # Not found anywhere
+    logger.warning(f"Tag database not found at {TESTING_TAG_DB_PATH} or {MAIN_TAG_DB_PATH}")
+    return []
 
 
 def get_or_create_chroma_client():

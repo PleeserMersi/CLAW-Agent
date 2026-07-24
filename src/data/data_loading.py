@@ -65,6 +65,8 @@ def fetch_shift_summaries(
     # Prepare parameters - fetch from all selected logbooks
     all_entries = []
     current_page = 0
+    consecutive_failures = 0
+    MAX_CONSECUTIVE_FAILURES = 3
     
     try:
         # Fetch from each logbook separately to track which hall each entry came from
@@ -85,13 +87,26 @@ def fetch_shift_summaries(
                 result = api_client.get(f"{JLAB_LOGBOOK_BASE_URL}/entries", params=params)
                 
                 if not result:
-                    logger.error(f"API request failed for {logbook_id} page {current_page}")
+                    consecutive_failures += 1
+                    logger.error(f"API request failed for {logbook_id} page {current_page} (consecutive failures: {consecutive_failures}/{MAX_CONSECUTIVE_FAILURES})")
+                    
+                    if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                        logger.error(f"\n{'='*60}")
+                        logger.error(f"PIPELINE STOPPED: API fetch failed {MAX_CONSECUTIVE_FAILURES} consecutive times.")
+                        logger.error(f"The JLab logbook API may be unavailable or unreachable.")
+                        logger.error(f"{'='*60}\n")
+                        return None
                     continue
+                
+                # Reset failure counter on success
+                consecutive_failures = 0
                 
                 page_data = result.get('data', {})
                 entries = page_data.get('entries', [])
                 
                 if not entries:
+                    # Reset failure counter when we successfully reach an empty page
+                    consecutive_failures = 0
                     break
                 
                 # Add hall information to each entry

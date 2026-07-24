@@ -22,7 +22,59 @@ from analysis.accuracy_test import main_function3 as verify_faults
 from analysis.fixer import main_function4 as fix_timestamps
 from analysis.verifyer import main_function5 as final_verification
 from analysis.tag_extraction import main_tagger
-from config import AGENT_NAME, DEFAULT_HALLS, BASE_DIR, validate_config_strict, SSH_TUNNELS, SSH_USERNAME, SSH_HOST
+from config import AGENT_NAME, DEFAULT_HALLS, BASE_DIR, validate_config_strict, SSH_TUNNELS, SSH_USERNAME, SSH_HOST, SSH_FORCE_CLOSE_PORTS
+
+
+def _check_port_conflicts(ports: list) -> tuple:
+    """
+    Check which ports are already in use.
+    
+    Args:
+        ports: List of local port numbers to check
+        
+    Returns:
+        Tuple of (conflicting_ports, all_ports_free)
+        - conflicting_ports: List of ports that are in use
+        - all_ports_free: True if all ports are free, False otherwise
+    """
+    conflicting_ports = []
+    
+    for port in ports:
+        try:
+            # Method 1: Try fuser first
+            result = subprocess.run(
+                ["fuser", str(port)],
+                capture_output=True,
+                text=True
+            )
+            if result.returncode == 0 and result.stdout.strip():
+                conflicting_ports.append(port)
+            else:
+                # Method 2: Try lsof as fallback
+                lsof_result = subprocess.run(
+                    ["lsof", "-ti", f":{port}"],
+                    capture_output=True,
+                    text=True
+                )
+                if lsof_result.returncode == 0 and lsof_result.stdout.strip():
+                    conflicting_ports.append(port)
+        except FileNotFoundError:
+            # fuser/lsof not available - try socket binding check
+            logger.debug(f"Port checking tools not available, attempting direct bind test for port {port}")
+            try:
+                import socket
+                test_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                test_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                test_result = test_sock.connect_ex(('127.0.0.1', port))
+                test_sock.close()
+                if test_result == 0:
+                    conflicting_ports.append(port)
+            except Exception as e:
+                logger.debug(f"Could not test port {port}: {e}")
+        except Exception as e:
+            logger.warning(f"Error checking port {port}: {e}")
+    
+    return conflicting_ports, len(conflicting_ports) == 0
 
 
 def _kill_port_processes(ports: list) -> int:
@@ -336,22 +388,43 @@ def run_pipeline_with_tunnel(start_date: str, end_date: str, verbose: bool = Fal
         local_ports = [local_port for local_port, _ in SSH_TUNNELS]
         
         logger.info(f"Checking ports {local_ports} for conflicts...")
-        killed = _kill_port_processes(local_ports)
-        if killed > 0:
-            logger.info(f"Freed {killed} port(s) for SSH tunnel")
+        conflicting_ports, all_ports_free = _check_port_conflicts(local_ports)
         
-        logger.info(f"Establishing SSH tunnel to {SSH_USERNAME}@{SSH_HOST} with {len(SSH_TUNNELS)} tunnel(s):")
-        for local_port, remote_port in SSH_TUNNELS:
-            logger.info(f"  {local_port} -> {remote_port}")
+        tunnel = None  # Default to no tunnel
         
-        tunnel = subprocess.Popen(ssh_args)
+        if conflicting_ports:
+            if SSH_FORCE_CLOSE_PORTS:
+                # Force-close conflicting ports
+                logger.info(f"Ports {conflicting_ports} are in use. Force-closing processes...")
+                killed = _kill_port_processes(conflicting_ports)
+                if killed > 0:
+                    logger.info(f"Freed {killed} port(s) for SSH tunnel")
+                else:
+                    logger.warning("Failed to free all conflicting ports. Tunnel creation may fail.")
+                # Proceed to create tunnel after freeing ports
+            else:
+                # Skip tunnel creation - continue without tunneling
+                logger.warning(f"\n{'='*60}")
+                logger.warning(f"SSH tunnel skipped: Ports {conflicting_ports} are already in use.")
+                logger.warning(f"Set SSH_FORCE_CLOSE_PORTS=true in .env to force-close these ports.")
+                logger.warning(f"Pipeline will continue WITHOUT SSH tunneling.")
+                logger.warning(f"{'='*60}\n")
+                # tunnel remains None
         
-        # Wait for tunnel to establish
-        time.sleep(2)
-        
-        if tunnel.poll() is not None:
-            logger.error("SSH tunnel failed to start. Check SSH configuration.")
-            tunnel = None  # Don't crash, just continue without tunnel
+        # Create tunnel if we have no conflicts or conflicts were resolved
+        if tunnel is None and (all_ports_free or (conflicting_ports and SSH_FORCE_CLOSE_PORTS)):
+            logger.info(f"Establishing SSH tunnel to {SSH_USERNAME}@{SSH_HOST} with {len(SSH_TUNNELS)} tunnel(s):")
+            for local_port, remote_port in SSH_TUNNELS:
+                logger.info(f"  {local_port} -> {remote_port}")
+            
+            tunnel = subprocess.Popen(ssh_args)
+            
+            # Wait for tunnel to establish
+            time.sleep(2)
+            
+            if tunnel.poll() is not None:
+                logger.error("SSH tunnel failed to start. Check SSH configuration.")
+                tunnel = None  # Don't crash, just continue without tunnel
     
     try:
         # Run the main pipeline
