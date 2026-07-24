@@ -29,6 +29,14 @@ else
     chroma_db_exists=0
 fi
 
+# Check for testing tag_db directory
+testing_tag_db_path="$PROJECT_DIR/testing/tag_db"
+if [ -d "$testing_tag_db_path" ]; then
+    testing_tag_db_exists=1
+else
+    testing_tag_db_exists=0
+fi
+
 # Count testing pipeline output files (all files in pipeline_output, including graphs and mock summaries)
 # Also includes SUMMARY.txt in mock_summaries
 testing_count=0
@@ -38,7 +46,7 @@ done < <(find "$PROJECT_DIR/testing" \( -name "*.csv" -o -name "*.json" -o -name
     ! -name "accuracy_report_medium_vs_real.csv.json" \
     -print0)
 
-total_count=$((count + pcache_count + chroma_db_exists + testing_count))
+total_count=$((count + pcache_count + chroma_db_exists + testing_tag_db_exists + testing_count))
 
 if [ $total_count -eq 0 ]; then
     echo "No temporary files, __pycache__ directories, chroma_db, or testing output found to delete."
@@ -58,6 +66,12 @@ if [ $chroma_db_exists -eq 1 ]; then
     echo ""
     echo "Found chroma_db directory to delete:"
     echo "  $chroma_db_path"
+fi
+
+if [ $testing_tag_db_exists -eq 1 ]; then
+    echo ""
+    echo "Found testing tag_db directory to delete:"
+    echo "  $testing_tag_db_path"
 fi
 
 if [ $testing_count -gt 0 ]; then
@@ -88,6 +102,11 @@ if [ $chroma_db_exists -eq 1 ]; then
     rm -rf "$chroma_db_path"
 fi
 
+# Delete testing tag_db directory
+if [ $testing_tag_db_exists -eq 1 ]; then
+    rm -rf "$testing_tag_db_path"
+fi
+
 # Delete testing pipeline output files (all files in pipeline_output, including graphs and mock summaries)
 # Also deletes SUMMARY.txt in mock_summaries
 if [ $testing_count -gt 0 ]; then
@@ -96,7 +115,7 @@ if [ $testing_count -gt 0 ]; then
         -delete
 fi
 
-echo "Deleted $count temporary file(s), $pycache_count __pycache__ directory/directories, chroma_db, and $testing_count testing output file(s)."
+echo "Deleted $count temporary file(s), $pycache_count __pycache__ directory/directories, chroma_db, testing tag_db, and $testing_count testing output file(s)."
 echo ""
 echo "Preserved files in data/final_output/:"
 find "$DATA_DIR/final_output" -name "*.csv" -type f -print | sed 's|^|  |'
